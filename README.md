@@ -1,5 +1,5 @@
 # Introduction to Machine Learning
-Created by: Ruth Okoilu
+Created by: <a href="https://github.com/damilolah">Ruth Okoilu (@damilolah)</a>
 
 ## Overview
 This online tutorial provides an introduction to machine learning concepts using the R language. In this tutorial, you will use machine learning to answer some questions related to business data. To do this, you will build two models using linear regression and random forests algorithms. You also will learn how to test the accuracy of your models.
