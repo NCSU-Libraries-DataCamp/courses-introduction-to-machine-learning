@@ -2,7 +2,7 @@ title: Introduction to Machine Learning with R
 description: In this course you will get hands-on practice with machine learning fundamentals in R.
 university: DataCamp
 difficulty_level: 1
-time_needed: 45 minutes
+time_needed: 1 hour
 datasets:
   ml5.RData: Ml5
   wage.csv: Wage
