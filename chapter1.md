@@ -1,6 +1,6 @@
 ---
 title       : "Machine Learning: Opening up the Black Box"
-description : "A General Introduction to Machine Learning"
+description : This chapter provides a general introduction to machine learning.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 

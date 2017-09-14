@@ -1,6 +1,6 @@
 ---
 title       :  "Does Money Buy Happiness?"
-description : You will learn to create a model using Linear Regression Modeling
+description : In this chapter, you will learn how to create a model using Linear Regression Modeling.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4dea87c7f
