@@ -12,4 +12,4 @@ The goals of this tutorial are to
 ## Start the course! 
 <a href=https://www.datacamp.com//teach/repositories/103553288/go target="_blank"><img src="https://s3.amazonaws.com/assets.datacamp.com/img/github/content-engineering-repos/course_button.png" width="150"></a>
 
-This course was created with Datacamp. Too learn more? Check out the <a href=https://www.datacamp.com//teach/documentation target="_blank">documentation</a> on teaching at DataCamp.
+This course was created with Datacamp. To learn more, check out <a href=https://www.datacamp.com">DataCamp</a>.
