@@ -306,13 +306,9 @@ plot(training$earnings, training$s_rating, col = s_rating, main="Regression Mode
 # Draw a regression line that represents the model reg_model. Use the abline() function. Put the name of the model inside the parentheses of abline()
 
 
-
 # Print out coefficient 'a'
 
-
-
 # Print out coefficient 'b'
-
 
 ```
 
