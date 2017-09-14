@@ -399,7 +399,7 @@ predict_happiness <- function(x){
 *** =pre_exercise_code
 ```{r}
 # load(url(""))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml1.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
 ```
 
 *** =sample_code
@@ -489,7 +489,7 @@ RMSE is gotten by calculating mean squared errors. This is simply a measures of 
 
 The formula is:
 
-  rmse  = ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/rmse.png)
+  rmse  = ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/rmse.png)
 
 
 Where:
@@ -509,7 +509,7 @@ The bar above the squared differences means find the mean of the squared differe
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml2.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml2.RData"))
 ```
 
 *** =sample_code

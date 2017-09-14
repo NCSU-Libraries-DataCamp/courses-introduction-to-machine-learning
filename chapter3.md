@@ -16,7 +16,7 @@ A decision tree is useful here in that it will segregate the students based on a
 
 
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/dtree.png)
+![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/dtree.png)
 
 In the figure above, you can see that variable Gender is able to identify best subpopulation sets compared to the variable height.
 
@@ -70,7 +70,7 @@ Now let’s see an example using the Wage dataset provided by the `ISLR` package
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
 
-Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/wage.csv', stringsAsFactors = FALSE)
+Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/wage.csv', stringsAsFactors = FALSE)
 
 ```
 
@@ -186,7 +186,7 @@ We will divide the wage column into 12 categories and add another column called 
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/ml3.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml3.RData"))
 
 ```
 
@@ -276,7 +276,7 @@ print(rf_model)
 ```{r}
 library(caret)
 library(randomForest)
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/ml4.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml4.RData"))
 
 ```
 
@@ -394,7 +394,7 @@ To check accuracy of your model, calculate RMSE using postResample() function li
 
 *** =pre_exercise_code
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/ml5.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml5.RData"))
 library(randomForest)
 library(ggplot2)
 library(caret)
@@ -508,7 +508,7 @@ This brings us to the end of this course. Keep finding ways to create better Mac
 ```{r}
 library(caret)
 library(randomForest)
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5337/datasets/ml5.RData"))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml5.RData"))
 rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=800)
  
 ```
