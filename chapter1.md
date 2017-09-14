@@ -1,33 +1,40 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : "Machine Learning: Opening up the Black Box"
+description : "A General Introduction to Machine Learning"
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c4b2d1a7d2
-## A really bad movie
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
+--- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:53d9ea348c
+## The Buzzword
+
+The term "Machine Learning" has been around for a while now, but to many it remains a mysterious black box. How does it really work? 
+
+This course will teach you about the process of doing Machine Learning, from getting data to improving the accuracy of the models you will create.  
+
+This course is for people that want to dive right in and get their hands dirty. By the end of the course, you should better understand what's inside the "black box".  
+
+According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed.
+This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.**
+
+
+### `CLASS ACTIVITY:`
+From the above definition, which of the following is not a Machine Learning Task?
 
 *** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+- Self driving cars
+- A program that prints the next 20 leap years
+- A program that categorizes emails into spam and non-spam
+- Predicting galaxies
 
 *** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
+Take a look at the options. Which task requires explicitly programming the computer?
 
 *** =pre_exercise_code
 ```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
+# None
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
-library(ggplot2)
-
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 ```
 
 *** =sct
@@ -35,80 +42,65 @@ ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
 msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
+msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm only human."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d5102a5192
-## More movies
+--- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:06d44465f4
 
-In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
+## A Model - The Secret Weapon
 
-A dataset with a selection of movies, `movie_selection`, is available in the workspace.
+A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. How? Machine Learning!
+
+Processes involved in Machine Learning include the following:
+
+- Get data
+- Preprocessing (Clean, Prepare, Manipulate Data & Exploratory Data Analysis)
+- Train Model
+- Test Model
+- Post-Process (Visualize, Evaluate, Improve Model & Present)
+
+The first two steps are typical for any analysis involving data.
+Creating a model is a critical part of machine learning.
+
+A model is an artifact or a formula created by the process of learning from previous data.
+When you plug in historical data into a machine learning algorithm, you get a model.
+
+In the above example, the machine uses a model that takes in an input (a person’s voice), does some processing and predicts the name of the person as the output. 
+
+In chapter 3, you learn how to test, evaluate, and improve your model.
+
+
+### `CLASS ACTIVITY:`
+
+A good machine learning model depends on which of the following? 
 
 *** =instructions
-- Check out the structure of `movie_selection`.
-- Select movies with a rating of 5 or higher. Assign the result to `good_movies`.
-- Use `plot()` to  plot `good_movies$Run` on the x-axis, `good_movies$Rating` on the y-axis and set `col` to `good_movies$Genre`.
-
+- Type of the data and software or statistical tool used for analysis
+- Type of machine learning algorithm used and software or statistical tool used for analysis
+- The quality of the dataset and type of machine learning algorithm used
 *** =hint
-- Use `str()` for the first instruction.
-- For the second instruction, you should use `...[movie_selection$Rating >= 5, ]`.
-- For the plot, use `plot(x = ..., y = ..., col = ...)`.
-
+Clean historical data + Good Machine Learning algorithm = Great Model!
 *** =pre_exercise_code
 ```{r}
-# You can also prepare your dataset in a specific way in the pre exercise code
-load(url("https://s3.amazonaws.com/assets.datacamp.com/course/teach/movies.RData"))
-movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"), c("Genre", "Rating", "Run")]
 
-# Clean up the environment
-rm(Movies)
 ```
 
 *** =sample_code
 ```{r}
-# movie_selection is available in your workspace
-
-# Check out the structure of movie_selection
-
-
-# Select movies that have a rating of 5 or higher: good_movies
-
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
 
 ```
 
 *** =solution
 ```{r}
-# movie_selection is available in your workspace
 
-# Check out the structure of movie_selection
-str(movie_selection)
-
-# Select movies that have a rating of 5 or higher: good_movies
-good_movies <- movie_selection[movie_selection$Rating >= 5, ]
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
-plot(good_movies$Run, good_movies$Rating, col = good_movies$Genre)
 ```
 
 *** =sct
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-test_function("str", args = "object",
-              not_called_msg = "You didn't call `str()`!",
-              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
-
-test_object("good_movies")
-
-test_function("plot", args = "x")
-test_function("plot", args = "y")
-test_function("plot", args = "col")
-
-test_error()
-
-success_msg("Good work!")
+msg_bad <- "That is not correct!"
+msg_success <- "Exactly!"
+test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_bad, msg_success))
 ```

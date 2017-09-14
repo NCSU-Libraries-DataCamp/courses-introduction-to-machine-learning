@@ -1,5 +1,8 @@
-title            : intro to machine learning
-description      : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-university       : DataCamp
-difficulty_level : 2
-time_needed      : 1 hour
+title: Introduction to Machine Learning with R
+description: In this course you will get hands-on practice with machine learning fundamentals in R.
+university: DataCamp
+difficulty_level: 1
+time_needed: 45 minutes
+datasets:
+  ml5.RData: Ml5
+  wage.csv: Wage
