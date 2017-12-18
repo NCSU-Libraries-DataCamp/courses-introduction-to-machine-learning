@@ -93,7 +93,7 @@ The `s_rating` variable is the **class** variable, or the thing we're trying to 
 Let's plot the data we already have to see if there is a relationship between `earnings` and `s_rating`, or an employee satisfaction.
 
 *** =instructions
-- Plot `emp_data` with earnings on the x-axis and s_rating on the y-axis. Follow the steps in the script.R file.
+- Plot `emp_data` with earnings on the x-axis and `s_rating` on the y-axis. Follow the steps in the script.R file.
 
 *** =hint
 This exercise requires you to fill in the blanks provided in the plot() function. Set x = earnings and y = s_rating for best results!
@@ -121,13 +121,13 @@ emp_data  <- data.frame(earnings, s_rating)
 # `main="Regression Modeling" is the title of the plot.
 
 #1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
-# Write the code here:  
+# Fill in x= , y= and col= fields below:  
+
 plot(x=, y=, col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
 #3. Click the Submit your Answer button when you are satisfied with the result
-
 
 ```
 
@@ -142,8 +142,13 @@ plot(x=, y=, col= , main="Regression Modeling")
 # `main="Regression Modeling" is the title of the plot.
 
 #1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
-# Write the code here:  
-plot(x= earnings, y=s_rating, col=s_rating, main="Regression Modeling")
+# Fill in x= , y= and col= fields below:  
+
+plot(x=, y=, col= , main="Regression Modeling")
+
+#2. Click the Run the Code button to see the plot!
+
+#3. Click the Submit your Answer button when you are satisfied with the result
 
 
 ```
