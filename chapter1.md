@@ -48,23 +48,23 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
 --- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:06d44465f4
 
-## A Model - The Secret Weapon
+## The Machine Learning Process
 
 A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. How? Machine Learning!
 
-Processes involved in Machine Learning include the following:
+The steps involved in Machine Learning include the following:
 
-- Get data
-- Preprocessing (Clean, Prepare, Manipulate Data & Exploratory Data Analysis)
-- Train Model
-- Test Model
-- Post-Process (Visualize, Evaluate, Improve Model & Present)
+- Getting data
+- Preprocessing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis)
+- Training the Model
+- Testing the Model
+- Post-Processing the data (Visualizing, Evaluating, Improving the Model & Presenting)
 
-The first two steps are typical for any analysis involving data.
-Creating a model is a critical part of machine learning.
+The first two steps are typical for any analysis involving data, but **creating a model is a critical part of machine learning.**
 
-A model is an artifact or a formula created by the process of learning from previous data.
-When you plug in historical data into a machine learning algorithm, you get a model.
+## The Model: the Secret Weapon in Machine Learning
+
+A model is an artifact or a formula created by the process of learning from previous data. When you plug in historical data into a machine learning algorithm, you get a model.
 
 In the above example, the machine uses a model that takes in an input (a person’s voice), does some processing and predicts the name of the person as the output. 
 
