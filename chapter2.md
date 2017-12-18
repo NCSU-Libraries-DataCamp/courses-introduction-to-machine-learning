@@ -47,6 +47,10 @@ emp_data  <- data.frame(earnings, s_rating)
 # 2. Now look at a summary of the dataset. Type summary(emp_data) on the line below this one
 
 
+# 3. Click the Run the Code button to see results.
+
+
+# 4. After examining the results, click the Submit Answer button to proceed!
 
 ```
 
