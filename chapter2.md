@@ -357,9 +357,9 @@ The equation is of the form:
 
 `y` is what we want to predict and `x` includes all the predictors required to form the model above.
 
-`a` and `b` are **coefficients** determined by the `lm()` function we’ll use shortly. `ei` stands for errors as a result of the factors we did not consider.  
+`a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
 
-The best model is one that minimizes ei the most. 
+The best model is one that minimizes `ei` the most. 
 
 A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way.
 
@@ -401,16 +401,17 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 
 # Create a linear model called reg_model
 
-reg_model <- 
+reg_model <- lm( , , data=  )
 
 
-# Know more about your model
+# Learn more about your model. Type summary(reg_model)
 
 summary(reg_model)
 
 # Plot the training set
 
 par(cex=.8)
+
 plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
 
 
