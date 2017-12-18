@@ -120,14 +120,16 @@ emp_data  <- data.frame(earnings, s_rating)
 *** =sample_code
 ```{r}
 
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis.
+
 # The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
 # `main="Regression Modeling" is the title of the plot.
 
-#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. Fill in the blanks:
- 
+#Fill in the blanks:
+
 plot(x=, y=, col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
@@ -140,20 +142,21 @@ plot(x=, y=, col= , main="Regression Modeling")
 *** =solution
 ```{r}
 
-# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")`  
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis.
+
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
 # `main="Regression Modeling" is the title of the plot.
 
-#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. Fill in the blanks:
+#Fill in the blanks:
 
-plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
+plot(x=, y=, col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
-#3. Click the Submit Answer button to proceed.
-
+#3. Click the Submit your Answer button when you are satisfied with the result
 
 ```
 
