@@ -3,6 +3,81 @@ title       :  "Does Money Buy Happiness?"
 description : In this chapter, you will learn how to create a model using Linear Regression Modeling.
 
 
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:59972d54f4
+## Get to Know Your Data
+
+In this exercise, you will test whether there is a connection between a person's salary and their happiness level. The first step is to get to know the data we'll be using.
+
+You will create our own dataset called `emp_data` having two attributes - earnings (a person's salary per day) and s_rating (satisfaction level) and 20 observations
+
+`emp_data` = Employee dataset
+
+`earnings` = What each employee earns in dollars per day
+
+`s_rating` = How satisfied the employee is with his/her wage
+
+
+*** =instructions
+
+Create the `emp_data` and `s_rating` datasets by submitting the code provided in the script window.
+
+
+*** =hint
+Read the instructions in the comments in the script.R window!
+
+*** =pre_exercise_code
+```{r}
+library(caret)
+
+earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
+
+s_rating<- c(50, 60, 80, 75, 50, 70, 75, 60, 50, 65, 70, 71,80, 82, 85, 80, 88, 90, 90, 60)
+
+emp_data  <- data.frame(earnings, s_rating)
+
+```
+
+*** =sample_code
+```{r}
+
+# 1. Look at the first few rows of `emp_data` dataset. On the next line below this comment, type head(emp_data)
+
+
+# 2. Now look at a summary of the dataset. Type summary(emp_data) on the line below this one
+
+
+
+```
+
+*** =solution
+```{r}
+
+# 1. Look at the first few rows of `emp_data` dataset. On the next line below this comment, type head(emp_data)
+
+head(emp_data)
+
+# 2. Now look at a summary of the dataset. Type summary(emp_data) on the line below this one
+
+summary(emp_data)
+
+
+```
+
+*** =sct
+```{r}
+
+test_function("head",
+              not_called_msg = "You didn't call `head()` correctly. Remember to put `emp_data` inside of head()")
+
+
+test_function("summary",
+              not_called_msg = "You didn't call `summary()` correctly. Remember to put `emp_data` inside of summary()")
+
+
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4dea87c7f
 
 ## Knowing Your Data
@@ -49,20 +124,13 @@ Now we will plot it on a graph to explore it further.
 
 library(caret)
 
-# Creating the dataset
 
-earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
-
-s_rating<- c(50, 60, 80, 75, 50, 70, 75, 60, 50, 65, 70, 71,80, 82, 85, 80, 88, 90, 90, 60)
-
-emp_data  <- data.frame(earnings, s_rating)
-
-emp_data 
-
-# Look at the dimensions (number of columns and rows) of this data set. Type dim(emp_data)
+# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. 
 
 
-# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. See instructions for how to create a graph with the plot() function.
+
+
+
 ```
 
 
@@ -72,19 +140,6 @@ emp_data
 # Loading the required package
 
 library(caret)
-
-# Creating the dataset
-earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
-
-s_rating<- c(50, 60, 80, 75, 50, 70, 75, 60, 50, 65, 70, 71,80, 82, 85, 80, 88, 90, 90, 60)
-
-emp_data  <- data.frame(earnings, s_rating)
-
-emp_data 
-
-# Look at the dimensions (number of columns and rows) of this data set. Type dim(emp_data)
-
-dim(emp_data)
 
 
 # Plot emp_data with earnings on the x-axis and s_rating on the y-axis. See instructions for how to create a graph with the plot() function.
@@ -103,8 +158,6 @@ test_function("plot",
               not_called_msg = "You didn't call `plot()` Remember: x = earnings and y = s_rating")
 
 
-test_function("dim",
-              not_called_msg = "You didn't call `dim()`. Remember to put `emp_data` inside of dim()")
 
 
 test_error()
