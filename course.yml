@@ -1,5 +1,5 @@
 title: Introduction to Machine Learning with R
-description: In this course you will get hands-on practice with machine learning in R. Some prior experience with R would be helpful before tackling this course. DataCamp offers a free Introduction to R course that would be beneficial to take prior to starting this course.
+description: While machine learning has been around awhile, it still remains a mysterious black box to many. How does it really work? By the end of the course, you should better understand the basics of machine learning and will get hands on experience developing linear regression and random forests models. Some prior experience with R would be helpful before tackling this course. DataCamp offers a free Introduction to R course that would be beneficial to complete prior to starting this course.
 university: DataCamp
 difficulty_level: 3
 time_needed: 1 hour
