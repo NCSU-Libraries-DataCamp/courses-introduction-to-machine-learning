@@ -46,7 +46,7 @@ A human can learn the voices of 10 (or perhaps 100) co-workers and be able to id
 The steps involved in Machine Learning include the following:
 
 - Getting data
-- Preprocessing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis (may include visualization)
+- Pre-processing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis (may include visualization)
 - Training the Model
 - Testing the Model
 - Post-Processing the data (Visualizing, Evaluating, Improving the Model & Presenting)
