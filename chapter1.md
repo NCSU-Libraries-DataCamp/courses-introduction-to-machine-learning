@@ -59,7 +59,6 @@ The first two steps are typical for any analysis involving data, but **creating 
 If machines can learn 10,000 voices and humans can only learn between 10 and 100, does that make computers smarter than humans?
 
 *** =instructions
-
 - Yes
 - No 
 - Don't know
