@@ -146,7 +146,7 @@ plot(x=, y=, col= , main="Regression Modeling")
 #1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
 # Fill in x= , y= and col= fields below:  
 
-plot(x=, y=, col= , main="Regression Modeling")
+plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
