@@ -75,24 +75,17 @@ test_function("head",
 test_function("summary",
               not_called_msg = "You didn't call `summary()` correctly. Remember to put `emp_data` inside of summary()")
 
+test_error()
 
+success_msg("Excellent!")
 
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4dea87c7f
 
-## Knowing Your Data
+## Making a prediction
 
-In this exercise, you will test whether there is a connection between a person's salary and their happiness level. The first step is to get to know the data we'll be using.
-
-You will create our own dataset called `emp_data` having two attributes - earnings (a person's salary per day) and s_rating (satisfaction level) and 20 observations
-
-`emp_data` = Employee dataset
-
-`earnings` = What each employee earns in dollars per day
-
-`s_rating` = How satisfied the employee is with his/her wage
-
-From this dataset, we will try to predict a new employee's satisfaction rating when he is paid $200, $400, or $1200 per day.
+From the `emp_data` dataset, we will try to predict a new employee's satisfaction rating when he is paid $200, $400, or $1200 per day.
 
 So, earnings is the **predictor** and s_rating is the **class** (class= the thing we're trying to predict). This exercise uses just one attribute for prediction and that is employee’s `earnings`. 
 
@@ -126,9 +119,7 @@ library(caret)
 
 
 # Plot emp_data with earnings on the x-axis and s_rating on the y-axis. 
-
-
-
+plot(x= earnings, y = s_rating, col= s_rating, main="Regression Modeling")
 
 
 ```
@@ -142,9 +133,9 @@ library(caret)
 library(caret)
 
 
-# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. See instructions for how to create a graph with the plot() function.
+# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. 
 
-plot(earnings, s_rating, col=s_rating, main="Regression Modeling")
+plot(x= earnings, y = s_rating, col= s_rating, main="Regression Modeling")
 
 
 ```
@@ -155,10 +146,7 @@ plot(earnings, s_rating, col=s_rating, main="Regression Modeling")
 
 
 test_function("plot",
-              not_called_msg = "You didn't call `plot()` Remember: x = earnings and y = s_rating")
-
-
-
+              not_called_msg = "You didn't call `plot()` correctly. Remember: x = earnings and y = s_rating")
 
 test_error()
 
