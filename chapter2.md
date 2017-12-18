@@ -304,7 +304,6 @@ inTrain <- createDataPartition(y=empdata$s_rating , p=0.6 , list=FALSE)
 # 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
 training <- emp_data[inTrain, ]
-
 test <- emp_data[-inTrain, ]
 
 # 3. Type the variable names `training`  and `test` to see the contents of those variables.
