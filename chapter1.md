@@ -35,6 +35,7 @@ Take a look at the options. Which task requires explicitly programming the compu
 msg_bad <- "That is not correct!"
 msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm only human."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+
 ```
 
 
