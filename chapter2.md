@@ -124,6 +124,10 @@ emp_data  <- data.frame(earnings, s_rating)
 # Write the code here:  
 plot(x=, y=, col= , main="Regression Modeling")
 
+#2. Click the Run the Code button to see the plot!
+
+#3. Click the Submit your Answer button when you are satisfied with the result
+
 
 ```
 
