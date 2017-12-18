@@ -10,7 +10,7 @@ description : In this chapter, you will learn how to create a model using Linear
 
 In this exercise, you will test whether there is a connection between a person's salary and their happiness level. The first step is to get to know the data we'll be using.
 
-You will create our own dataset called `emp_data` having two attributes - earnings (a person's salary per day) and s_rating (satisfaction level) and 20 observations
+You will work with a small dataset called `emp_data`, which has two columns and 20 observations. The 2 columns are `earnings` (a person's salary per day) and `s_rating` (satisfaction level)
 
 `emp_data` = Employee dataset
 
@@ -61,6 +61,9 @@ head(emp_data)
 
 summary(emp_data)
 
+# 3. Click the Run the Code button to see results.
+
+# 4. After examining the results, click the Submit Answer button to proceed!
 
 ```
 
@@ -108,13 +111,12 @@ s_rating<- c(50, 60, 80, 75, 50, 70, 75, 60, 50, 65, 70, 71,80, 82, 85, 80, 88, 
 
 emp_data  <- data.frame(earnings, s_rating)
 
-
 ```
 
 *** =sample_code
 ```{r}
 
-# The plot function looks like this: `plot(x=earnings, y=s_rating,  col=y, main="Regression Modeling")` 
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
@@ -135,7 +137,7 @@ plot(x=, y=, col= , main="Regression Modeling")
 *** =solution
 ```{r}
 
-# The plot function looks like this: `plot(x=earnings, y=s_rating,  col=y, main="Regression Modeling")` 
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")`  
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
@@ -148,7 +150,7 @@ plot(x=, y=, col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
-#3. Click the Submit your Answer button when you are satisfied with the result
+#3. Click the Submit Answer button to proceed.
 
 
 ```
@@ -168,15 +170,48 @@ success_msg("Good work!")
 ```
 
 
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:a11fe162ef
+## The Caret Package
+
+R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". To learn more about caret, type `?caret` in the console.
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:fccca9bca2
 
 ## Create a Training Set
 
-It is machine learning practice to partition dataset for analysis into Training and Test sets.
+It is machine learning practice to partition dataset for analysis into Training and Test sets. The purpose of doing this is to be able to test the accuracy of your model before feeding in new data.
 
-The training set could be 60 - 70% of the entire dataset while the test set is the percentage remaining.
+The training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
 
-The createDataPartition() function that comes with the caret package can be used to split the data. This function is used like so:
+The createDataPartition() function that comes with the the caret package can be used to split the data. This function is used like so:
 
 Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where y = class. In this formula, we type the class variable as `myData$class`, using a `$` between the name of the data set and the variable name we want.
 
