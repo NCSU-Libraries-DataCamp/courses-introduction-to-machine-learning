@@ -8,8 +8,7 @@ attachments :
 --- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:53d9ea348c
 ## The Buzzword
 
-According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed. This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.**
-
+According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed. This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.** 
 
 ### `CLASS ACTIVITY:`
 From the above definition, which of the following is not a Machine Learning Task?
@@ -27,7 +26,6 @@ Take a look at the options. Which task requires explicitly programming the compu
 ```{r}
 # None
 
-
 ```
 
 *** =sct
@@ -39,21 +37,49 @@ msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm onl
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
---- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:06d44465f4
 
-## The Machine Learning Process
+--- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:40173c5d8e
+## Machine Learning Process
 
-A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. How? Machine Learning!
+A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. How? Machine learning of course.
 
 The steps involved in Machine Learning include the following:
 
 - Getting data
-- Preprocessing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis)
+- Preprocessing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis (may include visualization)
 - Training the Model
 - Testing the Model
 - Post-Processing the data (Visualizing, Evaluating, Improving the Model & Presenting)
 
 The first two steps are typical for any analysis involving data, but **creating a model is a critical part of machine learning.**
+
+### `CLASS ACTIVITY:`
+
+If machines can learn 10,000 voices and humans can only learn between 10 and 100, does that make computers smarter than humans?
+
+*** =instructions
+-Yes
+-No 
+-Don't know
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+msg_bad <- "Just because computers can learn faster than humans doesn't make them smarter."
+msg_success <- "We humans are still pretty smart."
+test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
+
+```
+
+
+
+
+--- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:06d44465f4
 
 ## The Model: the Secret Weapon in Machine Learning
 
