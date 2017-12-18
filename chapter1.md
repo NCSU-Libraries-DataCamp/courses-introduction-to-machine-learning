@@ -64,6 +64,7 @@ If machines can learn 10,000 voices and humans can only learn between 10 and 100
 - Don't know
 
 *** =hint
+As machines get smarter, this point is debated. Humans still have advantages of common sense, instinct and other abilities that computers don't have...for now!
 
 *** =pre_exercise_code
 ```{r}
@@ -88,7 +89,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
 A model is an artifact or a formula created by the process of learning from previous data. When you plug in historical data into a machine learning algorithm, you get a model.
 
-In the above example, the machine uses a model that takes in an input (a person’s voice), does some processing and predicts the name of the person as the output. 
+In the above example, the machine uses a model that takes in an input (a human voice), does some processing and predicts the name of the person as the output. 
 
 In chapter 3, you learn how to test, evaluate, and improve your model.
 
