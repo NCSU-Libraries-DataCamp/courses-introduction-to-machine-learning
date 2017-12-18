@@ -126,9 +126,8 @@ emp_data  <- data.frame(earnings, s_rating)
 # `col=y` means that the color of the plot is set to the y variable.  
 # `main="Regression Modeling" is the title of the plot.
 
-#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
-# Fill in x= , y= and col= fields below:  
-
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. Fill in the blanks:
+ 
 plot(x=, y=, col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
@@ -147,8 +146,7 @@ plot(x=, y=, col= , main="Regression Modeling")
 # `col=y` means that the color of the plot is set to the y variable.  
 # `main="Regression Modeling" is the title of the plot.
 
-#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
-# Fill in x= , y= and col= fields below:  
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. Fill in the blanks:
 
 plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
