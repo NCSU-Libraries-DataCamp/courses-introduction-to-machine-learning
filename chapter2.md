@@ -70,7 +70,6 @@ summary(emp_data)
 test_function("head",
               not_called_msg = "You didn't call `head()` correctly. Remember to put `emp_data` inside of head()")
 
-
 test_function("summary",
               not_called_msg = "You didn't call `summary()` correctly. Remember to put `emp_data` inside of summary()")
 
