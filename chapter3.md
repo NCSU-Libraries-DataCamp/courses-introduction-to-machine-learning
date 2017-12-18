@@ -82,15 +82,15 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 
 Wage
 
-#Know more about the Wage dataset.
+# Learn more about the Wage dataset. Type dim(Wage) to see more.
 
 
 
-# Reveal first and last few observations
+# Reveal first few observations with the head() function. Type head(Wage) below.
 
 
 
-# Summary of the dataset
+# Get a summary of the dataset by typing summary(Wage)
 
 
 
@@ -106,15 +106,13 @@ Wage
 
 #Get to know more about the Wage dataset.
 
-str(Wage)
 dim(Wage)
 
-# Reveal first and last few observations
+# Reveal first few observations with the head() function. Type head(Wage)
 
 head(Wage)
-tail(Wage)
 
-# Summary of the dataset
+# Get a summary of the dataset by typing summary(Wage)
 
 summary(Wage)
 
@@ -132,9 +130,6 @@ test_function("dim",
               
 test_function("head",
               not_called_msg = "You didn't call `head()`")
-              
-test_function("tail",
-              not_called_msg = "You didn't call `tail()`")
               
                             
 test_function("summary",
@@ -178,7 +173,7 @@ We will divide the wage column into 12 categories and add another column called 
 *** =instructions
 - Now plot age against wage but this time make the colour based on education. 
 - Remove other variables not necessary for this analysis such as health, health_ins, region, race, year, sex, and maritl.
-- Call head() and tail() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
+- Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
 
 
 *** =hint
@@ -196,13 +191,13 @@ library(ggplot2)
 
 # Check for missing values
 
-# Some exploratory data analysis
+# Do some exploratory data visualization
 
 qplot(age, wage, data=Wage, color = race)
 
 # Remove unnecessary variables
 
-Wage<- subset(Wage, select=- c(logwage)
+Wage <- subset(Wage, select=- c(logwage)
 
 # Add wage_range to Wage datasets 
   wage_range <- cut(Wage$wage, b = 12)
@@ -217,15 +212,19 @@ library(ggplot2)
 # Check for missing values
 sum(is.na(Wage))
 
-# Some exploratory data analysis
+# Do some exploratory data visualization
 
 #qplot(age, wage, data=Wage, color = race)
+
 qplot(age, wage, data=Wage, color = education)
 
 # Remove unnecessary variables
+
 # Wage<- subset(Wage, select=- c(logwage))  remove this line after creating pre-exercise code
+
 Wage<- subset(Wage, select=- c(health, health_ins, region, race, year, sex, maritl))
-# Add wage_range to Wage datasets 
+
+# Add wage_range to Wage dataset 
   wage_range <- cut(Wage$wage, b = 12)
   Wage$wage_range <- wage_range
 
