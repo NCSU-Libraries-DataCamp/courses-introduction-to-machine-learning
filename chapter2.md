@@ -95,9 +95,19 @@ Let's plot the data we already have to see if there is a relationship between `e
 *** =instructions
 - Plot `emp_data` with earnings on the x-axis and s_rating on the y-axis. Follow the steps in the script.R file.
 
+*** =hint
+This exercise requires you to fill in the blanks provided in the plot() function. Set x = earnings and y = s_rating for best results!
+
+
 *** =pre_exercise_code
 ```{r}
 library(caret)
+earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
+
+s_rating<- c(50, 60, 80, 75, 50, 70, 75, 60, 50, 65, 70, 71,80, 82, 85, 80, 88, 90, 90, 60)
+
+emp_data  <- data.frame(earnings, s_rating)
+
 
 ```
 
