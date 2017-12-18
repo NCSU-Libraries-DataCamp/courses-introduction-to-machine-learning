@@ -178,7 +178,11 @@ success_msg("Good work!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:a11fe162ef
 ## The Caret Package
 
-R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". To learn more about caret, type `?caret` in the console.
+R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
+
+To learn more about a package, type `?caret` in the console and hit enter. 
+
+Then click the Submit Answer button.
 
 *** =instructions
 
@@ -186,17 +190,18 @@ R packages can be very useful because they contain functions that aren't includi
 
 *** =pre_exercise_code
 ```{r}
+library(caret)
 
 ```
 
 *** =sample_code
 ```{r}
-
+?caret
 ```
 
 *** =solution
 ```{r}
-
+?caret
 ```
 
 *** =sct
