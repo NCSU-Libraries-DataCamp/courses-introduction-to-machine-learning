@@ -180,11 +180,16 @@ success_msg("Good work!")
 
 R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
 
-To learn more about a package, you can type ? before the package name in the console or the script window. For example, `?caret`.
+It is common practice in machine learning to partition dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package. 
+
+To learn more about this function, type `?caret::createDataPartition` in the console or the script.R window.
+
+When you are done reading, click Submit Answer.
+
 
 
 *** =instructions
-?caret is already typed for you in the code. Click Run Code to see the results.
+?caret::createDataPartition is already typed for you in the code. Click Run Code to see the results.
 
 *** =hint
 
@@ -196,12 +201,12 @@ library(caret)
 
 *** =sample_code
 ```{r}
-?caret
+?caret::createDataPartition
 ```
 
 *** =solution
 ```{r}
-?caret
+?caret::createDataPartition
 ```
 
 *** =sct
@@ -212,11 +217,9 @@ library(caret)
 
 ## Create a Training Set
 
-It is machine learning practice to partition dataset for analysis into Training and Test sets. The purpose of doing this is to be able to test the accuracy of your model before feeding in new data.
+Both training and test data sets come from the original dataset. A training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
 
-The training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
-
-The createDataPartition() function that comes with the the caret package can be used to split the data. This function is used like so:
+The createDataPartition() function can be used to split the data. This function is used like so:
 
 Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
 ```{r}
