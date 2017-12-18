@@ -273,18 +273,18 @@ inTrain <- createDataPartition(y= , p=  , list= )
 
 # 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
-training <- emp_data[inTrain, ]
+training <- emp_data[ ]
 
-test <- emp_data[-inTrain, ]
+test <- emp_data[ ]
 
 # 3. Type the variable names `training`  and `test` to see the contents of those variables.
-
 
 
 # 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
 
 
 # 5. Run the code before you submit your answer! 
+
 
 # 6. Submit your answer to proceeed
 
@@ -295,21 +295,22 @@ test <- emp_data[-inTrain, ]
 
 # 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
 
-inTrain <- createDataPartition(y= , p=  , list= )
+inTrain <- createDataPartition(y=empdata$s_rating , p=0.6 , list=FALSE)
 
 # 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
-training <- emp_data[ ]
+training <- emp_data[inTrain, ]
 
-test <- emp_data[ ]
+test <- emp_data[-inTrain, ]
 
 # 3. Type the variable names `training`  and `test` to see the contents of those variables.
-
+training
+test
 
 
 # 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
-
-
+dim(training)
+dim(test)
 # 5. Run the code before you submit your answer! 
 
 # 6. Submit your answer to proceeed
