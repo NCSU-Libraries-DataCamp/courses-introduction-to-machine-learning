@@ -218,15 +218,19 @@ The training set is usually 60 - 70% of the entire dataset while the test set is
 
 The createDataPartition() function that comes with the the caret package can be used to split the data. This function is used like so:
 
-Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where y = class. In this formula, we type the class variable as `myData$class`, using a `$` between the name of the data set and the variable name we want.
+Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
 
 inTrain <- createDataPartition(y= myData$class, p=0.7, list=FALSE)
+
+We then define two variables, `training` and `test`, as inside of inTrain [inTrain,] and outside of inTrain [-inTrain,] respectively.
 
 training <- myData[inTrain, ]
 
 test <- myData[-inTrain, ]
 
-`p` is set to `0.7` because we need 70% of the whole data and list is set to FALSE because we don't want the function to return `inTrain` as a list.
+`p` is set to `0.7` because we need 70% of the whole data
+
+list = FALSE because we do not want the function to return `inTrain` as a list.
 
 
 *** =instructions
@@ -235,6 +239,7 @@ test <- myData[-inTrain, ]
 - Your training set should be 60% of the entire dataset (p=0.6)
 - Print out the training and test sets  
 - Check the dimension of both datasets to know more about the data
+
 *** =hint
 - type ?createDataPartition and hit Enter in the console to know how to use the createDataPartition() function
 - Make p=0.6 and set list=FALSE
