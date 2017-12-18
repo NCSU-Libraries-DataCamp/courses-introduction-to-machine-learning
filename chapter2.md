@@ -174,21 +174,16 @@ success_msg("Good work!")
 ```
 
 
-
-
-
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:a11fe162ef
 ## The Caret Package
 
 R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
 
-To learn more about a package, type `?caret` in the console and hit enter. 
+To learn more about a package, you can type ? before the package name in the console or the script window. For example, `?caret`.
 
-Then click the Submit Answer button.
 
 *** =instructions
+?caret is already typed for you in the code. Click Run Code to see the results.
 
 *** =hint
 
