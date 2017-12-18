@@ -11,7 +11,7 @@ attachments :
 According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed. This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.** 
 
 ### `CLASS ACTIVITY:`
-From the above definition, which of the following is not a Machine Learning Task?
+**QUESTION: From the above definition, which of the following is not a Machine Learning Task?**
 
 *** =instructions
 - Self driving cars
@@ -61,16 +61,18 @@ If machines can learn 10,000 voices and humans can only learn between 10 and 100
 -Yes
 -No 
 -Don't know
+
 *** =hint
 
 *** =pre_exercise_code
 ```{r}
-
+# None 
 ```
 
 *** =sct
 ```{r}
-msg_bad <- "Just because computers can learn faster than humans doesn't make them smarter."
+
+msg_bad <- "Just because computers can learn faster than humans doesn't make them smarter. We still have some advantages!"
 msg_success <- "We humans are still pretty smart."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
