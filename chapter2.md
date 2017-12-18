@@ -21,8 +21,7 @@ You will create our own dataset called `emp_data` having two attributes - earnin
 
 *** =instructions
 
-Create the `emp_data` and `s_rating` datasets by submitting the code provided in the script window.
-
+The dataset `emp_data` has already been created for you and loaded into this session. Read the steps in the script.R window and follow the instructions for each step!
 
 *** =hint
 Read the instructions in the comments in the script.R window!
@@ -87,39 +86,34 @@ success_msg("Excellent!")
 
 From the `emp_data` dataset, we will try to predict a new employee's satisfaction rating when he is paid $200, $400, or $1200 per day.
 
-So, earnings is the **predictor** and s_rating is the **class** (class= the thing we're trying to predict). This exercise uses just one attribute for prediction and that is employee’s `earnings`. 
+The `earnings` variable is the **predictor**, which means it's the data that we use to make the prediction.
 
-The dataset emp_data is a simple and clean dataset. No preprocessing required.
+The `s_rating` variable is the **class** variable, or the thing we're trying to predict. 
 
-Now we will plot it on a graph to explore it further.
+
+Let's plot the data we already have to see if there is a relationship between `earnings` and `s_rating`, or an employee satisfaction.
 
 *** =instructions
-- Plot `emp_data` with earnings on the x-axis and s_rating on the y-axis. 
-
-- The plot function looks like this: `plot(x, y,  col=y, main="Regression Modeling")` 
-`x` is your independent variable  
-`y` is your dependent variable  
-`col=y` means that the color of the plot is set to the y variable.  
-`main="Regression Modeling" is the title of the plot.
-
+- Plot `emp_data` with earnings on the x-axis and s_rating on the y-axis. Follow the steps in the script.R file.
 
 *** =pre_exercise_code
 ```{r}
-# You can also prepare your dataset in a specific way in the pre exercise code
-#None
-# Clean up the environment
+library(caret)
 
 ```
 
 *** =sample_code
 ```{r}
-# Loading the required package
 
-library(caret)
+# The plot function looks like this: `plot(x=earnings, y=s_rating,  col=y, main="Regression Modeling")` 
+# `x` is your independent variable  
+# `y` is your dependent variable  
+# `col=y` means that the color of the plot is set to the y variable.  
+# `main="Regression Modeling" is the title of the plot.
 
-
-# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. 
-plot(x= earnings, y = s_rating, col= s_rating, main="Regression Modeling")
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
+# Write the code here:  
+plot(x=, y=, col= , main="Regression Modeling")
 
 
 ```
@@ -128,14 +122,15 @@ plot(x= earnings, y = s_rating, col= s_rating, main="Regression Modeling")
 *** =solution
 ```{r}
 
-# Loading the required package
+# The plot function looks like this: `plot(x=earnings, y=s_rating,  col=y, main="Regression Modeling")` 
+# `x` is your independent variable  
+# `y` is your dependent variable  
+# `col=y` means that the color of the plot is set to the y variable.  
+# `main="Regression Modeling" is the title of the plot.
 
-library(caret)
-
-
-# Plot emp_data with earnings on the x-axis and s_rating on the y-axis. 
-
-plot(x= earnings, y = s_rating, col= s_rating, main="Regression Modeling")
+#1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis:
+# Write the code here:  
+plot(x= earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 
 ```
