@@ -219,18 +219,19 @@ The training set is usually 60 - 70% of the entire dataset while the test set is
 The createDataPartition() function that comes with the the caret package can be used to split the data. This function is used like so:
 
 Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
-
+```{r}
 inTrain <- createDataPartition(y= myData$class, p=0.7, list=FALSE)
-
-We then define two variables, `training` and `test`, as inside of inTrain [inTrain,] and outside of inTrain [-inTrain,] respectively.
 
 training <- myData[inTrain, ]
 
 test <- myData[-inTrain, ]
+```
 
-`p` is set to `0.7` because we need 70% of the whole data
+- We define two variables, `training` and `test`, as inside of inTrain [inTrain,] and outside of inTrain [-inTrain,] respectively.
 
-list = FALSE because we do not want the function to return `inTrain` as a list.
+- `p` is set to `0.7` because we need 70% of the whole data
+
+- list = FALSE because we do not want the function to return `inTrain` as a list.
 
 
 *** =instructions
@@ -247,13 +248,14 @@ list = FALSE because we do not want the function to return `inTrain` as a list.
 - Use the `dim()` function on training and test set for the fourth instruction
 
 *** =pre_exercise_code
+
 ```{r}
 
 # Loading the required package
 
 library(caret)
 
-# Clean up the environment
+# Create the dataset
 
 earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
 
@@ -266,45 +268,52 @@ emp_data  <- data.frame(earnings, s_rating)
 *** =sample_code
 ```{r}
 
-# Partition `emp_data` into training and test datasets. Note: `y=emp_data$s_rating` means the `s_rating` variable of the `emp_data` dataset.
+# 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
 
-inTrain <- createDataPartition(y= emp_data$s_rating, p=  , list= )
+inTrain <- createDataPartition(y= , p=  , list= )
 
-training <- emp_data[inTrain,]
+# 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
-test <- emp_data[-inTrain,]
+training <- emp_data[inTrain, ]
 
-# Type the variable names `training`  and `test` to see the contents of those variables.
+test <- emp_data[-inTrain, ]
 
-
-
-# Show the dimensions of the `training` and `test` sets using the dim() function.
+# 3. Type the variable names `training`  and `test` to see the contents of those variables.
 
 
+
+# 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
+
+
+# 5. Run the code before you submit your answer! 
+
+# 6. Submit your answer to proceeed
 
 ```
 
 *** =solution
 ```{r}
 
-# Partition `emp_data` into `training` and `test` datasets. Note: `y=emp_data$s_rating` means the `s_rating` variable of the `emp_data` dataset.
+# 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
 
-inTrain <- createDataPartition(y= emp_data$s_rating, p=0.6, list=FALSE)
+inTrain <- createDataPartition(y= , p=  , list= )
 
-training <- emp_data[inTrain,]
+# 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
-test <- emp_data[-inTrain,]
+training <- emp_data[ ]
 
-# Type the variable names `training`  and `test` to see the contents of those variables.
+test <- emp_data[ ]
+
+# 3. Type the variable names `training`  and `test` to see the contents of those variables.
 
 
 
-# Show the dimensions of the `training` and `test` sets
+# 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
 
-dim(training)
 
-dim(test)
+# 5. Run the code before you submit your answer! 
 
+# 6. Submit your answer to proceeed
 
 ```
 
@@ -337,7 +346,7 @@ The `lm()` function in R is an implementation of the Linear Regression algorithm
 
 You will create a linear model called `reg_model` by plugging in the training set into the `lm()` function.
 
-This model is simply a line. Regression modelling is used to find equations(lines) that fit data.
+This model is simply a line. Regression modeling is used to find equations(lines) that fit data.
 
 The equation is of the form:
 
@@ -351,7 +360,7 @@ The best model is one that minimizes ei the most.
 
 A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way.
 
-For example, to show that increase in age leads to increase in weight, or an increase in age leads to decrease in the number of hairs on one's head. This cannot be used in showing increase in library visitor per day of the week, which is usually non-linear.
+For example, to show that increase in age leads to increase in weight, or an increase in age leads to decrease in the number of hairs on the head. This cannot be used in showing increase in library visitor per day of the week, which is usually non-linear.
 
 `lm()` function is used like this: Suppose `myData` is the name of a dataset and I want to predict `class` an attribute in the dataset `myData` using `sex` (another attribute in myData) as my predictor:
 
@@ -445,7 +454,9 @@ b
 ```
 
 *** =sct
+
 ```{r}
+
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
 test_object("reg_model")
@@ -460,6 +471,7 @@ test_object("b")
 test_error()
 
 success_msg("Good work!")
+
 ```
 
 
