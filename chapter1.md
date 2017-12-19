@@ -1146,7 +1146,7 @@ test_object("wage_range")
 
 test_error()
 
-success_msg("Good work!")
+success_msg("You did it!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:2099ae7c71
 ## Forest of Trees
