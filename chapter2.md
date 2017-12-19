@@ -346,7 +346,7 @@ success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
 ## Linear Regression
 
-The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression allows us to study relationships between quantitative variables.
+The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression is a method for modeling the relationship between two variables.
 
 You will create a linear model called `reg_model` by plugging in the training set into the `lm()` function.
 
@@ -360,12 +360,16 @@ The equation is of the form:
 
 `a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
 
-The best model is one that minimizes `ei` the most.
+Given the meaning of `ei`, what type of model is best?
 
 
 *** =instructions
+-  A model that minimizes `ei` the most.
+-  A model that maximizes `ei` the most.
+-  Neither model
 
 *** =hint
+Remember that `ei` stands for errors. Is it better to maximize or minimize errors?
 
 *** =pre_exercise_code
 ```{r}
