@@ -392,7 +392,7 @@ A regression model is easy to implement but it often produces low performance mo
 
 `lm()` function is used like this: 
 
-`reg_model <- lm(class, predictor, data=dataset)`
+`reg_model <- lm(class ~ predictor, data=dataset)`
 
 `class` = the input data
 `predictor` = the thing we're trying to predict
@@ -425,7 +425,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 
 # Create a linear model called reg_model
 
-reg_model <- lm( , , data=  )
+reg_model <- lm( ~ , data=  )
 
 
 # Learn more about your model. Type summary(reg_model)

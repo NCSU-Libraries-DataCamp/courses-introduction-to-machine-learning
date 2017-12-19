@@ -343,10 +343,12 @@ Both training and test data sets come from the original data. A training set is 
 
 The createDataPartition() function can be used to split the data into training and test sets. This function is used like so:
 
-Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
+Suppose you want to predict what age group is more likely to purchase a certain product and `age_group` is a variable in your dataset, `myData`. Since `age_group` is what you want to predict, it is your dependent variable, or target variable.
+
+Create a data partition where `y = age_group`. In this formula, we type the `age_group` variable as `myData$age_group`, using a `$` between the name of the data set and the variable name we want.
 
 ```{r}
-inTrain <- createDataPartition(y= myData$class, p=0.7, list=FALSE)
+inTrain <- createDataPartition(y= myData$age_group, p=0.7, list=FALSE)
 
 training <- myData[inTrain, ]
 
@@ -362,7 +364,7 @@ list = FALSE because we do not want the function to return inTrain as a list.
 
 *** =instructions
 
-- Use createDataPartition() function in R to partition your dataset. This example may help you: `createDataPartition(y= myData$class, p=0.7, list=FALSE)`
+- Use createDataPartition() function in R to partition your dataset. This example may help you: `createDataPartition(y= myData$age_group, p=0.7, list=FALSE)`
 - Your training set should be 60% of the entire dataset (p=0.6)
 - Print out the training and test sets  
 - Check the dimension of both datasets to know more about the data
@@ -517,10 +519,10 @@ A regression model is easy to implement but it often produces low performance mo
 
 `lm()` function is used like this: 
 
-`reg_model <- lm(class ~ predictor, data=dataset)`
+`reg_model <- lm(predictor ~ target, data=dataset)`
 
-`class` = the input data
-`predictor` = the thing we're trying to predict
+`predictor` = the variable that helps us predict an outcome or output (independent variable)
+`target` = the variable we are trying to model or predict (independent variable)
 `dataset` = the name of the dataset you want to use
 
 
