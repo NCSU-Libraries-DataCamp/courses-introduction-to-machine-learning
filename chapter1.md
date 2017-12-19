@@ -1341,7 +1341,7 @@ postResample(test$wage_range, )
 *** =solution
 ```{r}
 
-# 1. Test your `rf_model` by using the predict() function. Ex: predict(model_name, test_data)`
+# 1. Test your `rf_model` by using the predict() function for rf_model and your test data (test). Ex: predict(model_name, test)`
 
 pred_wage_range <- predict(rf_model, test)
 
