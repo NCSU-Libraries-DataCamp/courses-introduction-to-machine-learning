@@ -599,12 +599,11 @@ abline(reg_model)
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
 test_object("reg_model")
-
-test_function("plot", not_called_msg = "Don't forget to call `plot()`") 
-
 test_function("summary", not_called_msg = "Don't forget to call `summary()`")
 
-test_function("abline", not_called_msg = "You didn't call `abline()`"
+test_function("plot", not_called_msg = "Don't forget to call `plot()`")
+
+test_function("abline", not_called_msg = "You didn't call `abline()`")
 
 test_error()
 
