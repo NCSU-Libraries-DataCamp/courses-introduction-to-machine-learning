@@ -987,8 +987,6 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 
 *** =sample_code
 ```{r}
-
-
 # 1. Take a look at the Wage dataset by printing it out.
 
 Wage
@@ -996,9 +994,7 @@ Wage
 # 2. Learn more about the Wage dataset. Type dim(Wage) to see more.
 
 
-
 # 3. Examine the first few observations with the head() function. Type head(Wage) below.
-
 
 
 # 4. Get a summary of the dataset by typing summary(Wage)
@@ -1032,16 +1028,13 @@ summary(Wage)
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-test_function("str",
-              not_called_msg = "You didn't call `str()`")
-              
+
 test_function("dim",
               not_called_msg = "You didn't call `dim()`")
               
 test_function("head",
               not_called_msg = "You didn't call `head()`")
-              
-                            
+             
 test_function("summary",
               not_called_msg = "You didn't call `summary()`")
 
