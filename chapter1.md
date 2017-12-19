@@ -726,6 +726,7 @@ predict_happiness <- function(x){
 ```{r}
 # load(url(""))
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
+reg_model <- lm(s_rating ~ earnings, data=training)
 ```
 
 *** =sample_code
@@ -807,6 +808,7 @@ Compare pred_rating with the s_rating column in the test data. What do you obser
 ```{r}
 # load(url(""))
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
+reg_model <- lm(s_rating ~ earnings, data=training)
 
 ```
 
@@ -996,9 +998,8 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 
 *** =sample_code
 ```{r}
-# 1. Take a look at the Wage dataset by printing it out.
+# 1. Take a look at the Wage dataset variables using the str() function. Put Wage inside of str().
 
-Wage
 
 # 2. Learn more about the Wage dataset. Type dim(Wage) to see more.
 
@@ -1017,7 +1018,7 @@ Wage
 
 # 1. Take a look at the Wage dataset by printing it out.
 
-Wage
+str(Wage)
 
 # 2. Learn more about the Wage dataset. Type dim(Wage) to see more.
 
@@ -1037,6 +1038,8 @@ summary(Wage)
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
+test_function("str",
+              not_called_msg = "You didn't call `str()`")
 
 test_function("dim",
               not_called_msg = "You didn't call `dim()`")
@@ -1204,7 +1207,7 @@ wage_range <- Wage$wage_range
 
 inTrain <- createDataPartition(y= , p= , list=FALSE)
 
-# 2. Partition inTrain into training and test datasets. Example: Wage[inTrain, ] versus Wage[-inTrain, ]
+# 2. Divide inTrain into training and test datasets. Example: Wage[inTrain, ] versus Wage[-inTrain, ]
 
 training <- Wage[  ]
 
@@ -1214,11 +1217,11 @@ test <- Wage[ ]
 # Hint: use the head() and dim() functions!
 
 
-# Observe plot of training set.
-qplot(age, wage, data=training, color=education)
+# 4. Make a scatter plot of training set variables x=age and y=wage, with color=education.
+qplot(x= , y= wage, data=training, color=education)
 
 
-# Create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Data = training. ntree=800. 
+# 5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800. 
 rf_model <- randomForest(x=    ~ y=   + jobclass + education, data =  , importance = TRUE, ntree=  )
 
 
@@ -1230,20 +1233,17 @@ rf_model
 *** =solution
 ```{r}
 
-
-# wage_range is the column of the Wage dataset that has the actual wages on it 
-
-wage_range <- Wage$wage_range
-
-# Partition the data into training and test datasets. Set y = to wage_range
+# 1. Create a dataset partition called inTrain. Set y = to wage_range, p=0.7 and list=FALSE.
 
 inTrain <- createDataPartition(y=wage_range , p=0.7, list=FALSE)
+
+# 2. Divide inTrain into training and test datasets. Example: Wage[inTrain, ] versus Wage[-inTrain, ]
 
 training <- Wage[inTrain, ]
 
 test <- Wage[-inTrain, ]
 
-# Print out first few observations of the training and test sets and show the dimensions of each set
+# 3. Print out first few observations of the training and test sets and show the dimensions of each set
 # Hint: use the head() and dim() functions!
 
 head(training)
@@ -1254,14 +1254,14 @@ dim(training)
 
 dim(test)
 
-# Observe plot of training set
+# 4. Make a scatter plot of training set variables age and wage, with color = to education.
 qplot(age, wage, data=training, color=education)
 
-# Create your randomForest model
+#5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800. 
 
 rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=800)
 
-# Print `rf_model` to the console
+# 6. Print `rf_model` to the console.
 rf_model
 
 ```
