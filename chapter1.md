@@ -915,7 +915,7 @@ success_msg("Great! At this point, you can either accept your model or go back a
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:e4a7c1750f
+--- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:e4a7c1750f
 ## Decision Tree Algorithm
 
 Decision trees are a type of `supervised learning` algorithm and are mostly used in `classification` problems. **The decision tree algorithm involves splitting the population or sample into two or more sub-populations based on the most significant input variables.**
@@ -939,9 +939,9 @@ The `Random Forest` algorithm is a variant of decision tree algorithm. The algor
 Which of the following types of questions might you try to answer with a Random Forests model?
 
 *** =instructions
--If you make more money, will you be happier?
--What is a new customer to a web store likely to purchase?
--Is it true that what goes up must come down?
+- If you make more money, will you be happier?
+- What is a new customer to a web store likely to purchase?
+- Is it true that what goes up must come down?
 
 *** =hint
 - Random forests are useful for finding relationships that can't be predicted linearly.
