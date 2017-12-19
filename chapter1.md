@@ -906,7 +906,7 @@ test_object("check_accuracy")
 
 test_error()
 
-success_msg("Good work! At this point, you can either accept your model or go back and improve it.")
+success_msg("Great! At this point, you can either accept your model or go back and improve it.")
 
 
 ```
@@ -915,13 +915,13 @@ success_msg("Good work! At this point, you can either accept your model or go ba
 --- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:e4a7c1750f
 ## Decision Tree Algorithm
 
-Decision tree is a type of `supervised learning` algorithm and is mostly used in `classification` problems. This algorithm involves splitting the population or sample into two or more subpopulation based on the most significant input variables.
+Decision tree is a type of `supervised learning` algorithm and is mostly used in `classification` problems. This algorithm involves splitting the population or sample into two or more sub-populations based on the most significant input variables.
 
-Suppose we have a sample of `30 students` with two input variables `Gender` (Boy / Girl) and `Height` (5 to 6 ft). 15 out of these 30 play `Basketball` in leisure time. Students in red play basketball and those in blue do not. Let’s say we want to create a model to predict who will play basketball during leisure period? Basically, we want to separate students who play basketball in their leisure time based on highly significant input variable among all two variables (a.k.a. predictors)
+Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 11 out of these 30 play `Basketball` in their free time. 
 
+We want to create a model to predict who will play basketball during their free time. Basically, we want to separate students who play basketball in their freee time based on highly significant input variables among the variables in the dataset. Significant input variables are called `predictors`. 
 
-A decision tree is useful here in that it will segregate the students based on all values of two variable. The variable which creates the best similar sets of students (i.e. sets which are dissimilar to each other). 
-
+A decision tree is useful here in that it will segregate the students based on all values of the two variables. The variable which creates the best similar sets of students (i.e. sets which are dissimilar to each other). 
 
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/dtree.png)
