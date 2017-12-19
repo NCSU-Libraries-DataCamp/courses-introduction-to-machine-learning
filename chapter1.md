@@ -917,7 +917,7 @@ success_msg("Great! At this point, you can either accept your model or go back a
 
 Decision tree is a type of `supervised learning` algorithm and is mostly used in `classification` problems. This algorithm involves splitting the population or sample into two or more sub-populations based on the most significant input variables.
 
-Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 11 out of these 30 play `Basketball` in their free time. 
+Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 15 out of these 30 play `Basketball` in their free time. 
 
 We want to create a model to predict who will play basketball during their free time. Basically, we want to separate students who play basketball in their freee time based on highly significant input variables among the variables in the dataset. Significant input variables are called `predictors`. 
 
@@ -926,7 +926,7 @@ A decision tree is useful here in that it will segregate the students based on a
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/dtree.png)
 
-In the figure above, you can see that variable Gender is able to identify best subpopulation sets compared to the variable height.
+In the figure above, you can see that variable `Gender` is able to identify best sub-population sets compared to the variable `Height`.
 
 The `Random Forest` algorithm is a variant of decision tree algorithm. The algorithm involves constructing a multitude of decision trees at training time and outputting a result that is the `mode class` or `mean prediction` of the individual trees. This makes random forest `very accurate` and popular among data people.
 
