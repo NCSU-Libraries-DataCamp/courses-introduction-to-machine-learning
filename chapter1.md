@@ -1207,7 +1207,7 @@ test <- Wage[ ]
 
 
 # Observe plot of training set.
-qplot(age, wage, data=training, color = education)
+qplot(age, wage, data=training, color=education)
 
 
 # Create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Data = training. ntree=800. 
@@ -1247,7 +1247,7 @@ dim(training)
 dim(test)
 
 # Observe plot of training set
-qplot(age, wage, data=training, color = education)
+qplot(age, wage, data=training, color=education)
 
 # Create your randomForest model
 
@@ -1275,7 +1275,7 @@ test_function("randomForest",
               
 test_error()
 
-success_msg("Good work!")
+success_msg("You are amazing!")
 
 ```
 
