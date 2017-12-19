@@ -519,7 +519,7 @@ A regression model is easy to implement but it often produces low performance mo
 
 `lm()` function is used like this: 
 
-`reg_model <- lm(predictor ~ target, data=dataset)`
+`reg_model <- lm(target ~ predictor, data=dataset)`
 
 `predictor` = the variable that helps us predict an outcome or output (independent variable)
 `target` = the variable we are trying to model or predict (independent variable)
