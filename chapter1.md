@@ -1142,6 +1142,8 @@ test_function("qplot",
               not_called_msg = "You need to call `qplot()`")
 test_object("Wage")
 
+test_object("wage_range")
+
 test_error()
 
 success_msg("Good work!")
