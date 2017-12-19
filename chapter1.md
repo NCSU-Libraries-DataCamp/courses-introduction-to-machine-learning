@@ -301,11 +301,11 @@ success_msg("Good work!")
 
 R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
 
-It is common practice in machine learning to partition dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package. 
+It is common practice in machine learning to partition a dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package. 
 
-To learn more about this function, type `?caret::createDataPartition` in the console or the script.R window.
+To learn more about this function, type `?caret::createDataPartition` in the console or the script.R window. Since it's already typed in for you, click Run Code to see more information about this function from r-documentation.org
 
-When you are done reading, click Submit Answer.
+When you are finished reading, click Submit Answer.
 
 
 
@@ -338,20 +338,20 @@ library(caret)
 
 ## Create a Training Set
 
-Both training and test data sets come from the original dataset. A training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
+Both training and test data sets come from the original data. A training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
 
-The createDataPartition() function can be used to split the data. This function is used like so:
+The createDataPartition() function can be used to split the data into training and test sets. This function is used like so:
 
 Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
-```{r}
+
 inTrain <- createDataPartition(y= myData$class, p=0.7, list=FALSE)
 
 training <- myData[inTrain, ]
 
 test <- myData[-inTrain, ]
-```
 
-- We define two variables, `training` and `test`, as inside of inTrain [inTrain,] and outside of inTrain [-inTrain,] respectively.
+- `[inTrain, ]` means included in the inTrain data
+- `[-intrain, ]` means not included in the inTrain data
 
 - `p` is set to `0.7` because we need 70% of the whole data
 
