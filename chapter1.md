@@ -954,7 +954,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:47b0bc653f
-## About the Data
+## Getting to Know the Wage Dataset
 
 The first step in Machine Learning is getting your data. This step involves finding the raw data in whatever format they are. They may be structured, unstructured, semi structured, whether flat files, tables, JSON format or in a database, video, audio, text etc. 
 
