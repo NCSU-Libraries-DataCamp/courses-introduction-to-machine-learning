@@ -570,7 +570,7 @@ plot(training$earnings, training$s_rating, col = s_rating, main="Regression Mode
 *** =solution
 ```{r}
 
-# 1. Create a linear model called reg_model. Use training$earnings as your class variable, s_rating$earnings as your predictor variable. Use training as your data.
+# 1. Create a linear model called reg_model. Use training$earnings as your class variable, training$s_rating as your predictor variable. Use training as your data.
 
 
 reg_model <- lm(s_rating ~ earnings, data=training)
