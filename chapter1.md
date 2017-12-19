@@ -559,12 +559,12 @@ reg_model <- lm(  ~ , data=  )
 
 summary(reg_model)
 
-# 3. Plot the training set
+# 3. Plot the training set x and y variables in a scatter plot.
 
-plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
+plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Regression Modeling")
 
 
-# 4. Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
+# 4. Draw a regression line that represents the model reg_model. Type abline(reg_model) in the line below this one.
 
 
 ```
@@ -581,12 +581,11 @@ reg_model <- lm(s_rating ~ earnings, data=training)
 
 summary(reg_model)
 
-# 3. Plot the training set
+# 3. Plot the training set x and y variables in a scatter plot.
 
-plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
+plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Regression Modeling")
 
-
-# 4. Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
+# 4. Draw a regression line that represents the model reg_model. Type abline(reg_model) in the line below this one.
 
 abline(reg_model)
 
