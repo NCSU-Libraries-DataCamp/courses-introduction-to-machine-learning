@@ -731,19 +731,12 @@ predict_happiness <- function(x){
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
 
-
 # 2. Predict satisfaction when employee is paid $200/day
 
 predict_happiness(200)
 
 # 3. Now predict the satisfaction rating when an employee is paid $500/day
 
-
-# 4. Create a variable pred_rating - Predicted satisfaction rating for test set
-
-pred_rating <- 
-
-# Compare test set s_rating with predicted s_rating for the test set
 
 ```
 
@@ -762,9 +755,12 @@ predict_happiness <- function(x){
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
 
-# Predict satisfaction when employee is paid $200, $400, and $1200 
+# 2. Predict satisfaction when employee is paid $200/day
 
 predict_happiness(200)
+
+# 3. Now predict the satisfaction rating when an employee is paid $500/day
+predict_happiness(500)
 
 ```
 
@@ -775,7 +771,7 @@ test_object("predict_happiness")
 
 test_error()
 
-success_msg("Good work!")
+success_msg("Perfect!")
 
 ```
 
@@ -882,19 +878,24 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 
 *** =sample_code
 ```{r}
-# Check accuracy by calculating the RMSE 
+# 1. Check the accuracy of your model by calculating the RMSE 
 
+check_accuracy <- sqrt(sum(( - ) )) 
 
+# 2. Print 'check_accuracy' to see your results
 
 ```
 
 *** =solution
 ```{r}
 
-# Check accuracy by calculating the RMSE 
+# 1. Check the accuracy of your model by calculating the RMSE 
 
 check_accuracy <- sqrt(sum((pred_rating - test$s_rating)^2))
 
+
+# 2. Print 'check_accuracy' to see your results
+check_accuracy 
 
 ```
 
@@ -905,12 +906,10 @@ test_object("check_accuracy")
 
 test_error()
 
-success_msg("Good work! At this point, you can accept your model and present your work or seek to improve your model.")
+success_msg("Good work! At this point, you can either accept your model or go back and improve it.")
 
 
 ```
-
-
 
 
 --- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:e4a7c1750f
