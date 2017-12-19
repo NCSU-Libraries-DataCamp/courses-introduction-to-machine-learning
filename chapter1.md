@@ -517,7 +517,7 @@ A regression model is easy to implement but it often produces low performance mo
 
 `lm()` function is used like this: 
 
-`reg_model <- lm(class, predictor, data=dataset)`
+`reg_model <- lm(class ~ predictor, data=dataset)`
 
 `class` = the input data
 `predictor` = the thing we're trying to predict
@@ -550,7 +550,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 
 # 1. Create a linear model called reg_model. Use training$earnings as your class variable, s_rating$earnings as your predictor variable. Use training as your data.
 
-reg_model <- lm( , , data=  )
+reg_model <- lm(  ~ , data=  )
 
 
 # 2. Examing a summary of your model. Type summary(reg_model)
@@ -623,8 +623,9 @@ a <- coef(reg_model)[1]
 b <- coef(reg_model)[2]
 ```
 
+Find coefficients a and b using the example provided above. What are the values of the coefficients?
 *** =instructions
-Find coefficients a and b using the example provided above.
+
 *** =hint
 
 *** =pre_exercise_code
