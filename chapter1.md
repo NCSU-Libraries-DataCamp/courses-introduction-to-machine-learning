@@ -636,7 +636,7 @@ Follow the coef(reg_model)[1] syntax in your answers.
 
 *** =pre_exercise_code
 ```{r}
-
+reg_model <- lm(s_rating ~ earnings, data=training)
 ```
 
 *** =sample_code
