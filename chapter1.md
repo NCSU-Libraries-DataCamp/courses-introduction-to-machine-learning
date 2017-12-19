@@ -1176,44 +1176,42 @@ print(rf_model)
 - Make p=0.7 and set list=FALSE
 - To print a variable to the console, simply type the name of the variable on a new line.
 - Use `qplot()` for the third instruction. Just as you did in the previous exercise.
-- Do you notice that the plot created of the training set is similar to the plot done on the whole Wage dataset? This is because the createDataPartition function splits the data evenly into training and test sets.
-
+- Do you notice that the plot created from the training set is similar to the plot done on the whole Wage dataset? This is because the createDataPartition function splits the data evenly into training and test sets.
 - For the last instruction, set `ntree` to 800. Print rf_model to console.
-- Use head() function for the second instruction. To print a variable to the console, simply type the name of the variable on a new line. 
+- Use head() function for the third instruction. To print a variable to the console, simply type the name of the variable on a new line. 
 
 *** =pre_exercise_code
 ```{r}
 library(caret)
 library(randomForest)
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml4.RData"))
+wage_range <- Wage$wage_range
 
 ```
 
 *** =sample_code
 ```{r}
 
-# wage_range is the column of the Wage dataset that has the actual wages on it. 
-
-wage_range <- Wage$wage_range
-
-# Partition the data into training and test datasets. Set y = to wage_range
+# 1. Create a dataset partition called inTrain. Set y = to wage_range, p=0.7 and list=FALSE.
 
 inTrain <- createDataPartition(y= , p= , list=FALSE)
 
-training <- Wage[inTrain, ]
+# 2. Partition inTrain into training and test datasets. Example: Wage[inTrain, ] versus Wage[-inTrain, ]
 
-test <- Wage[-inTrain, ]
+training <- Wage[  ]
 
-# Print out training and test sets and show the dimensions of each set
+test <- Wage[ ]
+
+# 3. Print out training and test sets and show the dimensions of each set
 # Hint: use the head() and dim() functions!
 
 
-# Observe plot of training set
-
+# Observe plot of training set.
 qplot(age, wage, data=training, color = education)
 
 
-# Create your randomForest model
+# Create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Data = training. ntree=800. 
+rf_model <- randomForest(x=    ~ y=   + jobclass + education, data =  , importance = TRUE, ntree=  )
 
 
 # Print `rf_model` to the console
