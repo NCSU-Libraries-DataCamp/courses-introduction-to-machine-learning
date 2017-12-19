@@ -706,9 +706,6 @@ predict_happiness <- function(x){
 *** =instructions
 - Complete the predict_happiness function 
 - Insert $200, $400 and then $1200
-- Instead of using `predict_happiness` function, you can also use the built-in `predict` funtion provided by caret package.The predict function takes in the model and the test dataset like this
-`predict(red_model, test)`. Put all your predicted values in a variable called `pred_rating` as in `pred_rating <- predicted(reg_model, test)`
-- Compare pred_rating with the s_rating column in the test data. What do you observe? Are the predicted ratings close to the actual?
 
 *** =hint
 - Get coefficents `a` and `b` from  `reg_model` using the `coef()` function as in previous exercises.
@@ -735,12 +732,11 @@ predict_happiness <- function(x){
 }
 
 
-
 # 2. Predict satisfaction when employee is paid $200/day
 
 predict_happiness(200)
 
-# 3. Now predcit the satisfaction rating when an employee is paid $500/day
+# 3. Now predict the satisfaction rating when an employee is paid $500/day
 
 
 # 4. Create a variable pred_rating - Predicted satisfaction rating for test set
@@ -770,24 +766,12 @@ predict_happiness <- function(x){
 
 predict_happiness(200)
 
-
-
-# pred_rating - Predicted satisfaction rating for test set
-
-pred_rating <- predict(reg_model, test)
-
-# Compare test set s_rating with predicted s_rating for the test set
-data.frame(pred_rating, test$s_rating)
-
-
 ```
 
 *** =sct
 ```{r}
 
 test_object("predict_happiness")
-test_object("pred_rating")
-
 
 test_error()
 
@@ -795,6 +779,74 @@ success_msg("Good work!")
 
 ```
 
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:4f8a44fee2
+## Using the lm() Predict Function as an Alternative Approach
+
+
+*** =instructions
+Instead of using `predict_happiness` function, you can also use the built-in `predict` function provided by caret package.The predict function takes in the model and the test dataset like this:
+
+`predict(red_model, test)`
+
+Put all your predicted values in a variable called `pred_rating` as in `pred_rating <- predicted(reg_model, test)`
+
+Compare pred_rating with the s_rating column in the test data. What do you observe? Are the predicted ratings close to the actual?
+
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+# load(url(""))
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
+
+```
+
+*** =sample_code
+```{r}
+
+# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set
+
+pred_rating <- predict(reg_model, test)
+
+# 2. Compare test set s_rating with predicted s_rating for the test set. A data frame has been created for you.
+
+data.frame(pred_rating, test$s_rating)
+
+# 3. Click run code to see the output
+
+# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here. 
+
+```
+
+*** =solution
+```{r}
+# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set
+
+pred_rating <- predict(reg_model, test)
+
+# 2. Compare test set s_rating with predicted s_rating for the test set. A data frame has been created for you.
+
+data.frame(pred_rating, test$s_rating)
+
+# 3. Click run code to see the output
+
+# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here. 
+
+
+```
+
+*** =sct
+```{r}
+test_object("pred_rating")
+
+test_error()
+
+success_msg("Great job!")
+
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:75c935d749
 ## Check Accuracy
 
