@@ -421,7 +421,7 @@ test <- emp_data[ ]
 *** =solution
 ```{r}
 
-# 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
+# 1. Create the inTrain dataset. Set y = to emp_data$s_rating, p= 0.6, and list=FALSE
 
 inTrain <- createDataPartition(y=emp_data$s_rating , p=0.6 , list=FALSE)
 
@@ -461,7 +461,7 @@ test_function("dim",
 
 test_error()
 
-success_msg("Good work!")
+success_msg("Fantastic!")
 ```
 
 
@@ -529,17 +529,18 @@ A regression model is easy to implement but it often produces low performance mo
 *** =instructions
 - Create a linear model called `reg_model` on the training dataset
 - Plot the `training` set with earnings on the x-axis and s_rating on the y-axis
-- Draw a regression line on the plot above that represents the model reg_model 
+- Draw a regression line on the plot above that represents the model reg_model using abline()
 
 
 *** =hint
 - Type `?lm` to learn how to use the lm() function
-- Use `abline()` function to fit a line to the plot. Put the model name inside parenthesis.
+- Use `abline()` function to fit a line to the plot. Put the model name inside the parentheses.
 - type ?coef to know how to use the coef() function
 
 *** =pre_exercise_code
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
+
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml.RData"))
 
 
