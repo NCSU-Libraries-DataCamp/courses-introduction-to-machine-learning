@@ -550,7 +550,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 *** =sample_code
 ```{r}
 
-# 1. Create a linear model called reg_model. Use training$earnings as your class variable, s_rating$earnings as your predictor variable. Use training as your data.
+# 1. Create a linear model called reg_model. Use s_rating as your y (or target) variable. Use earnings as your predictor variable. Use training as your data.
 
 reg_model <- lm(  ~ , data=  )
 
