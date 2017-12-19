@@ -1111,6 +1111,8 @@ Wage <- subset(Wage, select=- c(  ))
  
  Wage$wage_range <- wage_range
 
+#5. Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
+
 ```
 
 *** =solution
@@ -1130,9 +1132,11 @@ Wage<- subset(Wage, select=- c(health, health_ins, region, race, year, sex, mari
 
 # 4. Add wage_range variable to the Wage datasets. Put Wage$wage inside of cut() and b=12.
 
- wage_range <- cut(Wage$wage, b = 12)
- Wage$wage_range <- wage_range
+wage_range <- cut(Wage$wage, b = 12)
+Wage$wage_range <- wage_range
 
+# 5. Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
+head(Wage)
 ```
 
 *** =sct
