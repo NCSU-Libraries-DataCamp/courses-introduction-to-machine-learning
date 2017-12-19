@@ -542,6 +542,10 @@ Find coefficients a and b using the example provided above.
 ```{r}
 
 ```
+
+
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:6ae37a587e
 ## Test Model
 
