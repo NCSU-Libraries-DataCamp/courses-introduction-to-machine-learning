@@ -1106,9 +1106,10 @@ qplot(x= , y= , data= , color =  )
 
 Wage <- subset(Wage, select=- c(  ))
 
-# 4. Add wage_range variable to the Wage datasets. Note that b=12 sets the number of wage categories, or bins, equal to 12.
-  wage_range <- cut(Wage$wage, b = 12)
-  Wage$wage_range <- wage_range
+# 4. Add wage_range variable to the Wage datasets. Put Wage$wage inside of cut() and b=12.
+ wage_range <- cut(  ,  )
+ 
+ Wage$wage_range <- wage_range
 
 ```
 
@@ -1127,10 +1128,10 @@ qplot(age, wage, data=Wage, color = education)
 
 Wage<- subset(Wage, select=- c(health, health_ins, region, race, year, sex, maritl))
 
-# 4. Add wage_range variable to the Wage datasets. Note that b=12 sets the number of wage categories, or bins, equal to 12.
+# 4. Add wage_range variable to the Wage datasets. Put Wage$wage inside of cut() and b=12.
 
-  wage_range <- cut(Wage$wage, b = 12)
-  Wage$wage_range <- wage_range
+ wage_range <- cut(Wage$wage, b = 12)
+ Wage$wage_range <- wage_range
 
 ```
 
