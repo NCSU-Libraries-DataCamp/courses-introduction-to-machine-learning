@@ -723,28 +723,27 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 *** =sample_code
 ```{r}
 
-# Create predict_happiness() function
-# Get coefficients a and b from reg_model
+# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating. Fill in the brackets to get the correct coefficients a and b from the model. 
 
 predict_happiness <- function(x){
 
-  a = 
-  b = 
-  Result<- a + (b * x) 
+  a = coef(reg_model)[ ]
+  b = coef(reg_model)[ ]
+  Result <- a + (b * x) 
   percent<- "%"
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
 
 
 
-# Predict satisfaction when employee is paid $200, $400, and $1200 
+# 2. Predict satisfaction when employee is paid $200/day
 
 predict_happiness(200)
 
+# 3. Now predcit the satisfaction rating when an employee is paid $500/day
 
 
-
-# pred_rating - Predicted satisfaction rating for test set
+# 4. Create a variable pred_rating - Predicted satisfaction rating for test set
 
 pred_rating <- 
 
@@ -756,8 +755,7 @@ pred_rating <-
 *** =solution
 ```{r}
 
-# Create predict_happiness() function
-# Get coefficients a and b from reg_model
+# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating. 
 
 predict_happiness <- function(x){
 
@@ -771,8 +769,6 @@ predict_happiness <- function(x){
 # Predict satisfaction when employee is paid $200, $400, and $1200 
 
 predict_happiness(200)
-
-
 
 
 
