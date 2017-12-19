@@ -655,6 +655,19 @@ b
 
 *** =solution
 ```{r}
+# 1. Create a variable 'a' for coefficient 'a'
+
+a <- coef(reg_model)[1]
+
+# 2. Print out 'a' by typing 'a' on the next line
+a
+
+# 3. Create a variable 'b' for coefficient 'b'
+
+b <- coef(reg_model)[2]
+
+# 4. Print out 'b' by typing 'b' on the next line.
+b
 
 ```
 
@@ -674,16 +687,16 @@ Here, you will create a function called `predict_happiness` to test your model.
 
 You are to get coefficients `a` and `b` from `reg_model` and predict satisfaction when employee is paid `$200`, `$400`, and `$1200` using `predict_hapiness` function.
 
-```
+```{r} 
 predict_happiness <- function(x){
   
-  a = 
+  a <- coef(reg_model)[1]
   
-  b =
+  b <- coef(reg_model)[2]
   
-  Result<- a + (b * x) 
+  Result <- a + (b * x) 
  
-  percent<- "%"
+  percent <- "%"
   
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
   
