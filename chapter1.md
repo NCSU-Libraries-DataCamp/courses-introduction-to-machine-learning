@@ -615,7 +615,7 @@ success_msg("You are doing really well!")
 
 
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:84a2fa109d
+--- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
 ## Coefficients in a Linear Model
 
 Remember that the equation for a linear model is `y = a + bx + ei`
