@@ -707,7 +707,7 @@ predict_happiness <- function(x){
 
 *** =instructions
 - Complete the predict_happiness function 
-- Insert $200, $400 and then $1200
+- Follow instructions listed for each step.
 
 *** =hint
 - Get coefficents `a` and `b` from  `reg_model` using the `coef()` function as in previous exercises.
@@ -733,11 +733,11 @@ predict_happiness <- function(x){
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
 
-# 2. Predict satisfaction when employee is paid $200/day
+# 2. Predict satisfaction when employee is paid $200/day.
 
 predict_happiness(200)
 
-# 3. Now predict the satisfaction rating when an employee is paid $500/day
+# 3. Now predict the satisfaction rating when an employee is paid $800/day. Use the predict_happiness() function.
 
 
 ```
@@ -761,8 +761,8 @@ predict_happiness <- function(x){
 
 predict_happiness(200)
 
-# 3. Now predict the satisfaction rating when an employee is paid $500/day
-predict_happiness(500)
+# 3. Now predict the satisfaction rating when an employee is paid $800/day
+predict_happiness(800)
 
 ```
 
