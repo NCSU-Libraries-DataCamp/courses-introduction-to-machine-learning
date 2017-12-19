@@ -575,8 +575,7 @@ plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Re
 
 # 1. Create a linear model called reg_model. Use training$earnings as your class variable, training$s_rating as your predictor variable. Use training as your data.
 
-
-reg_model <- lm(s_rating ~ earnings, data=training)
+reg_model <- lm(training$s_rating ~ training$earnings, data=training)
 
 # 2. Examine a summary of your model. Type summary(reg_model)
 
@@ -603,8 +602,9 @@ test_object("reg_model")
 
 test_function("plot", not_called_msg = "Don't forget to call `plot()`") 
 
-test_function("abline",
-              not_called_msg = "You didn't call `abline()`"
+test_function("summary", not_called_msg = "Don't forget to call `summary()`")
+
+test_function("abline", not_called_msg = "You didn't call `abline()`"
 
 test_error()
 
@@ -619,7 +619,7 @@ success_msg("You are doing really well!")
 
 Remember that the equation for a linear model is `y = a + bx + ei`
 
-We can get the coefficients `a` and `b` from `reg_model` using the coef function:
+We can get the coefficients `a` and `b` from `reg_model` using the coef() function:
 
 ```{r}
 a <- coef(reg_model)[1] 
