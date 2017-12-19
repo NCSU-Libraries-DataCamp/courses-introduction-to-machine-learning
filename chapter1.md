@@ -844,7 +844,7 @@ success_msg("Great job!")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:75c935d749
-## Check Accuracy
+## Check the Accuracy of Your Model
 
 There a number of ways to evaluate your model. For this exercise, you will use the root-mean-square error (RMSE). 
 RMSE is gotten by calculating mean squared errors. This is simply a measures of deviation of predicted points from the original value.

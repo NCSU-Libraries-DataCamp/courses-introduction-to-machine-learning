@@ -7,7 +7,7 @@ description: While machine learning has been around awhile, it still remains a m
   to R course that would be beneficial to complete prior to starting this course.
 university: DataCamp
 difficulty_level: 3
-time_needed: 1 hour
+time_needed: 1.5 hours
 datasets:
   rmse.png: Rmse
   ml5.RData: Ml5
