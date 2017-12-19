@@ -379,6 +379,10 @@ Remember that `ei` stands for errors. Is it better to maximize or minimize error
 *** =sct
 ```{r}
 
+msg_bad <- "Sorry, try again"
+msg_success <- "Yes!"
+test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
+
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
 ## Create Model
