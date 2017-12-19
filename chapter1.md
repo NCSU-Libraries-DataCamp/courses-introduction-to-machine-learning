@@ -625,10 +625,6 @@ success_msg("Good work!")
 
 
 
-
-
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
 ## Coefficients in a linear model
 
@@ -636,9 +632,10 @@ Remember that the equation for a linear model is `y = a + bx + ei`
 
 We can get the coefficients `a` and `b` from `reg_model` using the coef function:
 
-a <- coef(reg_model)[1]
-
+```{r}
+a <- coef(reg_model)[1] 
 b <- coef(reg_model)[2]
+```
 
 *** =instructions
 Find coefficients a and b using the example provided above.
@@ -674,6 +671,7 @@ Here, you will create a function called `predict_happiness` to test your model.
 
 You are to get coefficients `a` and `b` from `reg_model` and predict satisfaction when employee is paid `$200`, `$400`, and `$1200` using `predict_hapiness` function.
 
+```
 predict_happiness <- function(x){
   
   a = 
@@ -687,6 +685,7 @@ predict_happiness <- function(x){
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
   
   }
+ ```
 
 *** =instructions
 - Complete the predict_happiness function 
@@ -720,6 +719,8 @@ predict_happiness <- function(x){
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
 
+
+
 # Predict satisfaction when employee is paid $200, $400, and $1200 
 
 predict_happiness(200)
@@ -733,9 +734,8 @@ pred_rating <-
 
 # Compare test set s_rating with predicted s_rating for the test set
 
-
-
 ```
+
 
 *** =solution
 ```{r}
@@ -891,7 +891,6 @@ msg_success <- "Great!"
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
 ```
-
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:47b0bc653f
 ## About the Data
