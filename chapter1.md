@@ -334,6 +334,7 @@ library(caret)
 ```{r}
 
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:fccca9bca2
 
 ## Create a Training Set
@@ -343,6 +344,7 @@ Both training and test data sets come from the original data. A training set is 
 The createDataPartition() function can be used to split the data into training and test sets. This function is used like so:
 
 Suppose `myData` is the name of a dataset and I want to predict `class`, which is an attribute in the dataset `myData`.  We create a data partition where `y = class`. In this formula, we type the `class` variable as `myData$class`, using a `$` between the name of the data set and the variable name we want. This is standard R notation for referring to a variable in a dataset.
+
 ```{r}
 inTrain <- createDataPartition(y= myData$class, p=0.7, list=FALSE)
 
@@ -350,12 +352,12 @@ training <- myData[inTrain, ]
 
 test <- myData[-inTrain, ]
 
-- `[inTrain, ]` means included in the inTrain data
-- `[-intrain, ]` means not included in the inTrain data
+[inTrain, ] means included in the inTrain data
+[-intrain, ] means not included in the inTrain data
 
-- `p` is set to `0.7` because we need 70% of the whole data
+p is set to 0.7 because we need 70% of the whole data
 
-- list = FALSE because we do not want the function to return `inTrain` as a list.
+list = FALSE because we do not want the function to return inTrain as a list.
 ```
 
 *** =instructions
