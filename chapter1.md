@@ -548,61 +548,46 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 *** =sample_code
 ```{r}
 
-# Create a linear model called reg_model
+# 1. Create a linear model called reg_model. Use training$earnings as your class variable, s_rating$earnings as your predictor variable. Use training as your data.
 
 reg_model <- lm( , , data=  )
 
 
-# Learn more about your model. Type summary(reg_model)
+# 2. Examing a summary of your model. Type summary(reg_model)
 
 summary(reg_model)
 
-# Plot the training set
-
-par(cex=.8)
+# 3. Plot the training set
 
 plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
 
 
-# Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
+# 4. Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
 
-
-# Print out coefficient 'a'
-
-# Print out coefficient 'b'
 
 ```
 
 *** =solution
 ```{r}
 
-# Create a linear model called reg_model
+# 1. Create a linear model called reg_model. Use training$earnings as your class variable, s_rating$earnings as your predictor variable. Use training as your data.
+
 
 reg_model <- lm(s_rating ~ earnings, data=training)
 
-# Know more about your model
+# 2. Examing a summary of your model. Type summary(reg_model)
 
 summary(reg_model)
 
-# Plot the training set
-par(cex=.8)
+# 3. Plot the training set
+
 plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
 
-# Draw a regression line that represents the model reg_model. Use the abline() function. Put the name of the model inside the parentheses of abline()
+
+# 4. Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
 
 abline(reg_model)
 
-# Print out coefficient 'a'
-
-a <- coef(reg_model)[1]
-
-# Print out coefficient 'b'
-
-b <- coef(reg_model)[2]
-
-a
-
-b
 
 ```
 
@@ -616,10 +601,7 @@ test_object("reg_model")
 
 
 test_function("abline",
-              not_called_msg = "You didn't call `abline()`")
-
-test_object("a")
-test_object("b")
+              not_called_msg = "You didn't call `abline()`"
 
 test_error()
 
@@ -629,7 +611,7 @@ success_msg("Good work!")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:84a2fa109d
 ## Coefficients in a Linear Model
 
 Remember that the equation for a linear model is `y = a + bx + ei`
@@ -652,6 +634,19 @@ Find coefficients a and b using the example provided above.
 
 *** =sample_code
 ```{r}
+# 1. Create a variable 'a' for coefficient 'a'
+
+a <- coef(  )[ ]
+
+# 2. Print out 'a' by typing 'a' on the next line
+a
+
+# 3. Create a variable 'b' for coefficient 'b'
+
+b <- coef( )[ ]
+
+# 4. Print out 'b' by typing 'b' on the next line.
+b
 
 ```
 
@@ -662,7 +657,8 @@ Find coefficients a and b using the example provided above.
 
 *** =sct
 ```{r}
-
+test_object("a")
+test_object("b")
 ```
 
 
