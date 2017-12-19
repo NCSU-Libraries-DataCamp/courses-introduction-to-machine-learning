@@ -342,6 +342,40 @@ success_msg("Good work!")
 ```
 
 
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
+## Linear Regression
+
+The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression allows us to study relationships between quantitative variables.
+
+You will create a linear model called `reg_model` by plugging in the training set into the `lm()` function.
+
+This model is simply a line. Regression modeling is used to find equations(lines) that fit data.
+
+The equation is of the form:
+
+`y = a + bx + ei`
+
+`y` is what we want to predict and `x` includes all the predictors required to form the model above.
+
+`a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
+
+The best model is one that minimizes `ei` the most.
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
 ## Create Model
 
@@ -359,7 +393,8 @@ The equation is of the form:
 
 `a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
 
-The best model is one that minimizes `ei` the most. 
+The best model is one that minimizes `ei` the most.
+
 
 A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way.
 
