@@ -1283,7 +1283,7 @@ test_function("randomForest",
               
 test_error()
 
-success_msg("You are amazing!")
+success_msg("Wow! You are amazing!")
 
 ```
 
@@ -1320,40 +1320,41 @@ rf_model <- randomForest(wage_range ~ age + jobclass + education, data = trainin
 *** =sample_code
 ```{r}
 
-# Test your `rf_model` by using the predict function.
+# 1. Test your `rf_model` by using the predict() function. Ex: predict(model_name, test_data)`
 
 pred_wage_range <-
 
-# Compare predicted wage to original wage of test dataset. This creates a data set with one column having the actual data, and one column having the predicted data.
+# 2. Compare predicted wage to original wage of test dataset. This creates a data set with one column having the actual data, and one column having the predicted data.
 
 compare_result <- data.frame(test$wage_range, pred_wage_range)
   
-# Print out the first few observation of compare_result 
+# 3. Print out the first few observation of compare_result using the head() function
 
-head(compare_result)
 
-# Check accuracy by calculating the RMSE 
+# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function! 
+#Example: postResample(actual_wage, pred_wage_range) 
 
-postResample(test$wage_range, pred_wage_range)
+postResample(test$wage_range, )
 
 ```
 
 *** =solution
 ```{r}
 
-# Test your `rf_model` by using the predict() function.
+# 1. Test your `rf_model` by using the predict() function. Ex: predict(model_name, test_data)`
 
 pred_wage_range <- predict(rf_model, test)
 
-# Compare predicted wage to original wage of test dataset. This creates a data set with one column having the actual data, and one column having the predicted data.
+# 2. Compare predicted wage to original wage of test dataset. This creates a data set with one column having the actual data, and one column having the predicted data.
 
 compare_result <- data.frame(test$wage_range, pred_wage_range)
 
-# Print out the first few observations of compare_result. Use the head() function.
+# 3. Print out the first few observation of compare_result using the head() function
 
 head(compare_result) 
 
-# Check accuracy by calculating the RMSE 
+# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function! 
+#Example: postResample(actual_wage, pred_wage_range) 
 
 postResample(test$wage_range, pred_wage_range)
 
@@ -1383,7 +1384,6 @@ success_msg("Good work! At this point, you can accept your model and present you
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:61976945d8
 ## Improving Your Model
-
 
 Your model depends on the quality of your dataset and the type of Machine Learning algorithm used. Therefore, to improve the accuracy of your model, you should:
 
@@ -1430,25 +1430,23 @@ rf_model <- randomForest(wage_range ~ age + jobclass + education, data = trainin
 
 *** =sample_code
 ```{r}
-# Check what attributes affect our model the most 
+# 1. Check what attributes affect our model the most. Use the `importance()` function on `rf_model`.
 
-# Use the `importance()` function on `rf_model` below
+importance( ) 
 
+# 2. Use the `varImpPlot()` function on `rf_model`
 
-# Use the `varImpPlot()` function on `rf_model` below
-
+varImpPlot( ) 
 ```
 
 *** =solution
 ```{r}
 
-# Check what attributes affect our model the most 
-
-# Use the `importance()` function on `rf_model` below
+# 1. Check what attributes affect our model the most. Use the `importance()` function on `rf_model`.
 
 importance(rf_model) 
 
-# Use the `varImpPlot()` function on `rf_model` below
+# 2. Use the `varImpPlot()` function on `rf_model`
 
 varImpPlot(rf_model)
 ```
