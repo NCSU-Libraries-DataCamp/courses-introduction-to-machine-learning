@@ -802,7 +802,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 *** =sample_code
 ```{r}
 
-# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set
+# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set. Put reg_model in parentheses before test.
 
 pred_rating <- predict(   , test)
 
@@ -818,7 +818,7 @@ data.frame(pred_rating, test$s_rating)
 
 *** =solution
 ```{r}
-# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set
+# 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set. Put reg_model in parentheses before test.
 
 pred_rating <- predict(reg_model, test)
 
