@@ -779,7 +779,7 @@ success_msg("Perfect!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:4f8a44fee2
-## Using the lm() Predict Function as an Alternative Approach
+## Using the predict() Function as an Alternative Approach
 
 
 *** =instructions
@@ -860,14 +860,14 @@ Where:
 
  * f = predicted values 
  * o = true values 
-The bar above the squared differences means find the mean of the squared difference.
+The bar above the squared differences means find the *mean* of the squared difference.
 
 
 *** =instructions
 
 - You can find the rmse of the test dataset by running the code below in the console:
 
-    `sqrt(sum((pred_rating - test$s_rating)^2))`
+    `sqrt(sum( (pred_rating - test$s_rating)^2 ) / n)`
 
 *** =hint
 
@@ -881,7 +881,9 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 ```{r}
 # 1. Check the accuracy of your model by calculating the RMSE 
 
-check_accuracy <- sqrt(sum(( - ) )) 
+n = 20 # n = number of observations predicted
+
+check_accuracy <- sqrt(sum(( - )^2) / n) 
 
 # 2. Print 'check_accuracy' to see your results
 
@@ -891,8 +893,9 @@ check_accuracy <- sqrt(sum(( - ) ))
 ```{r}
 
 # 1. Check the accuracy of your model by calculating the RMSE 
+n = 20 # n = number of observations predicted
 
-check_accuracy <- sqrt(sum((pred_rating - test$s_rating)^2))
+check_accuracy <- sqrt(sum((pred_rating - test$s_rating)^2)/n)
 
 
 # 2. Print 'check_accuracy' to see your results
