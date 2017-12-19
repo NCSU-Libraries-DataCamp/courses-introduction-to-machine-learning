@@ -803,6 +803,7 @@ The bar above the squared differences means find the mean of the squared differe
 
 
 *** =instructions
+
 - You can find the rmse of the test dataset by running the code below in the console:
 
     `sqrt(sum((pred_rating - test$s_rating)^2))`
