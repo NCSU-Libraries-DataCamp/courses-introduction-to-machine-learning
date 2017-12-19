@@ -879,9 +879,9 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 
 *** =sample_code
 ```{r}
-# 1. Check the accuracy of your model by calculating the RMSE 
+# 1. Check the accuracy of your model by calculating the RMSE for pred_rating and test$s_rating
 
-n = 20 # n = number of observations predicted
+n = 20 # n is the number of observations predicted
 
 check_accuracy <- sqrt(sum(( - )^2) / n) 
 
@@ -892,8 +892,9 @@ check_accuracy <- sqrt(sum(( - )^2) / n)
 *** =solution
 ```{r}
 
-# 1. Check the accuracy of your model by calculating the RMSE 
-n = 20 # n = number of observations predicted
+# 1. Check the accuracy of your model by calculating the RMSE for pred_rating and test$s_rating
+
+n = 20 # n is the number of observations predicted
 
 check_accuracy <- sqrt(sum((pred_rating - test$s_rating)^2)/n)
 
