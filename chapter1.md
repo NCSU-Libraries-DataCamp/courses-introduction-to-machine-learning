@@ -1068,12 +1068,11 @@ Activities done in this step also includes detecting the presence of missing (NA
 
 As we saw from the example on satisfaction ratings, predicting continuous variables gives results that are not exactly precise. So for this example, we will present our results in terms of categories. 
 
-We will divide the wage column into 12 categories and add another column called wage_range to the Wage dataset. Each observed wage will therefore fall under one of these 12 categories. 
+We will divide the `wage` column into 12 categories and add another column called `wage_range` to the Wage dataset. Each observed wage will therefore fall under one of these 12 categories. 
 
-```
-A good model will predict the right range of wages a person can earn.
-
+```{r}
         wage_range <- cut(Wage$wage, b = 12)
+        
         Wage$wage_range <- wage_range
 ```
 
@@ -1099,15 +1098,15 @@ library(ggplot2)
 # 1. Check for missing values in the Wage dataset. Use the sum(is.na(()) function.
 sum(is.na(   ))
 
-# 2. Do some exploratory data visualization using the qplot function) Set x=age, y=wage, data=Wage, color=race)
+# 2. Do some exploratory data visualization using the qplot function) Set x=age, y=wage, data=Wage, color=education)
 
 qplot(x= , y= , data= , color =  )
 
-# Remove the logwage variable using the subset() function, since it is unnecessary. Put logwage inside of c( )
+# 3. Remove the following unnecessary variables using the subset() function: health, health_ins, region, race, year, sex, maritl. Put the variables inside the c( )
 
 Wage <- subset(Wage, select=- c(  ))
 
-# Add wage_range to Wage datasets 
+# 4. Add wage_range variable to the Wage datasets. Note that b=12 sets the number of wage categories, or bins, equal to 12.
   wage_range <- cut(Wage$wage, b = 12)
   Wage$wage_range <- wage_range
 
@@ -1117,22 +1116,19 @@ Wage <- subset(Wage, select=- c(  ))
 ```{r}
 library(ggplot2)
 
-# Check for missing values
+# 1. Check for missing values in the Wage dataset. Use the sum(is.na(()) function.
 sum(is.na(Wage))
 
-# Do some exploratory data visualization
-
-#qplot(age, wage, data=Wage, color = race)
+# 2. Do some exploratory data visualization using the qplot function) Set x=age, y=wage, data=Wage, color=education)
 
 qplot(age, wage, data=Wage, color = education)
 
-# Remove unnecessary variables
-
-# Wage<- subset(Wage, select=- c(logwage))  remove this line after creating pre-exercise code
+# 3. Remove the following unnecessary variables using the subset() function: health, health_ins, region, race, year, sex, maritl. Put the variables inside the c( )
 
 Wage<- subset(Wage, select=- c(health, health_ins, region, race, year, sex, maritl))
 
-# Add wage_range to Wage dataset 
+# 4. Add wage_range variable to the Wage datasets. Note that b=12 sets the number of wage categories, or bins, equal to 12.
+
   wage_range <- cut(Wage$wage, b = 12)
   Wage$wage_range <- wage_range
 
