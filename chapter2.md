@@ -346,11 +346,9 @@ success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
 ## Linear Regression
 
-The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression is a method for modeling the relationship between two variables.
+The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression is a method for modeling the relationship between two variables. The goal is to find an equation that fits the data.
 
 You will create a linear model called `reg_model` by plugging in the training set into the `lm()` function.
-
-This model is simply a line. Regression modeling is used to find equations(lines) that fit data.
 
 The equation is of the form:
 
@@ -358,7 +356,10 @@ The equation is of the form:
 
 `y` is what we want to predict and `x` includes all the predictors required to form the model above.
 
-`a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
+`a` and `b` are **coefficients** determined by the `lm()` function. 
+
+`ei` stands for errors as a result of the factors we did not consider.  
+
 
 Given the meaning of `ei`, what type of model is best?
 
@@ -387,36 +388,16 @@ test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
 --- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
 ## Create Model
 
-The `lm()` function in R is an implementation of the Linear Regression algorithm. 
+A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way, for example, so show that an increase in age leads to increase in weight. 
 
-You will create a linear model called `reg_model` by plugging in the training set into the `lm()` function.
+`lm()` function is used like this: 
 
-This model is simply a line. Regression modeling is used to find equations(lines) that fit data.
+`reg_model <- lm(class, predictor, data=dataset)`
 
-The equation is of the form:
+`class` = the input data
+`predictor` = the thing we're trying to predict
+`dataset` = the name of the dataset you want to use
 
-`y = a + bx + ei`
-
-`y` is what we want to predict and `x` includes all the predictors required to form the model above.
-
-`a` and `b` are **coefficients** determined by the `lm()` function we will use shortly. `ei` stands for errors as a result of the factors we did not consider.  
-
-The best model is one that minimizes `ei` the most.
-
-
-A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way.
-
-For example, to show that increase in age leads to increase in weight, or an increase in age leads to decrease in the number of hairs on the head. This cannot be used in showing increase in library visitor per day of the week, which is usually non-linear.
-
-`lm()` function is used like this: Suppose `myData` is the name of a dataset and I want to predict `class` an attribute in the dataset `myData` using `sex` (another attribute in myData) as my predictor:
-
-`reg_model <- lm(class, sex, data=myData)`
-
-We can get `a` and `b` from `reg_model` using the coef function:
-
-a <- coef(reg_model)[1]
-
-b <- coef(reg_model)[2]
 
 *** =instructions
 - Create a linear model called `reg_model` on the training dataset
@@ -522,6 +503,45 @@ success_msg("Good work!")
 ```
 
 
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
+## Coefficients in a linear model
+
+Remember that the equation for a linear model is `y = a + bx + ei`
+
+We can get the coefficients `a` and `b` from `reg_model` using the coef function:
+
+a <- coef(reg_model)[1]
+
+b <- coef(reg_model)[2]
+
+*** =instructions
+Find coefficients a and b using the example provided above.
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:6ae37a587e
 ## Test Model
 
