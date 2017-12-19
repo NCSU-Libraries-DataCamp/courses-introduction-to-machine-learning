@@ -665,14 +665,14 @@ b
 a <- coef(reg_model)[1]
 
 # 2. Print out 'a' by typing 'a' on the next line
-#a
+a
 
 # 3. Create a variable 'b' for coefficient 'b'
 
 b <- coef(reg_model)[2]
 
 # 4. Print out 'b' by typing 'b' on the next line.
-#b
+b
 
 ```
 
