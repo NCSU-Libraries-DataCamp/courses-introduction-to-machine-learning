@@ -575,7 +575,7 @@ plot(x=earnings, y=s_rating, col = s_rating, main="Regression Modeling")
 
 # 1. Create a linear model called reg_model. Use s_rating as your y (or target) variable. Use earnings as your predictor variable. Use training as your data.
 
-reg_model <- lm(s_rating ~ training$earnings, data=training)
+reg_model <- lm(s_rating ~ earnings, data=training)
 
 # 2. Examine a summary of your model. Type summary(reg_model)
 
