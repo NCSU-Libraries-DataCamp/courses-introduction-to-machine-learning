@@ -251,7 +251,7 @@ emp_data  <- data.frame(earnings, s_rating)
 
 #Fill in the blanks:
 
-plot(x=, y=, col= , main="Regression Modeling")
+plot(x= , y= , col= , main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
@@ -273,7 +273,7 @@ plot(x=, y=, col= , main="Regression Modeling")
 
 #Fill in the blanks:
 
-plot(x=, y=, col= , main="Regression Modeling")
+plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
 
