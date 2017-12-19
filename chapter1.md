@@ -1151,7 +1151,6 @@ success_msg("You did it!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:2099ae7c71
 ## Forest of Trees
 
-
 In this step, you will:
 
 * Partition the data into `training` and `test` sets.
@@ -1279,7 +1278,7 @@ success_msg("Good work!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:5c7dfd46fe
-## Check Accuracy
+## Check the Accuracy of your Random Forests Model
 
 Test your `rf_model` by using the predict function like this:
 
@@ -1404,7 +1403,7 @@ We can see that the predictor `education` plays an important role in the accurac
 
 This brings us to the end of this course. Keep finding ways to create better Machine Learning models.
 
-### `Good luck in your future endeavor!`
+### `Good luck in your future endeavors!`
 
 *** =hint
 
