@@ -562,7 +562,7 @@ summary(reg_model)
 
 # 3. Plot the training set x and y variables in a scatter plot.
 
-plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Regression Modeling")
+plot(x=earnings, y=s_rating, col = s_rating, main="Regression Modeling")
 
 
 # 4. Draw a regression line that represents the model reg_model. Type abline(reg_model) in the line below this one.
@@ -583,7 +583,9 @@ summary(reg_model)
 
 # 3. Plot the training set x and y variables in a scatter plot.
 
-plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Regression Modeling")
+plot(x=earnings, y=s_rating, col = s_rating, main="Regression Modeling")
+
+#plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Regression Modeling")
 
 # 4. Draw a regression line that represents the model reg_model. Type abline(reg_model) in the line below this one.
 
