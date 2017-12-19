@@ -1,6 +1,6 @@
 ---
 title       : "Machine Learning: Opening up the Black Box"
-description : This chapter provides a general introduction to machine learning.
+description : This chapter provides an introduction to machine learning and hands-on practice developing two common machine learning models - linear regression and random forests.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
