@@ -600,13 +600,14 @@ abline(reg_model)
 
 test_object("reg_model")
 
+test_function("plot", not_called_msg = "Don't forget to call `plot()`") 
 
 test_function("abline",
               not_called_msg = "You didn't call `abline()`"
 
 test_error()
 
-success_msg("Good work!")
+success_msg("You are doing really well!")
 
 ```
 
