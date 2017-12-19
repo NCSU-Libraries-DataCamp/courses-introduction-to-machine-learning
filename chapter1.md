@@ -914,12 +914,13 @@ success_msg("Great! At this point, you can either accept your model or go back a
 
 Decision trees are a type of `supervised learning` algorithm and are mostly used in `classification` problems. **The decision tree algorithm involves splitting the population or sample into two or more sub-populations based on the most significant input variables.**
 
+Here is an example: 
+
 Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 15 out of these 30 play `Basketball` in their free time. 
 
 We want to create a model to predict who will play basketball during their free time. Basically, we want to separate students who play basketball in their free time based on highly significant input variables among the variables in the dataset. Significant input variables are called `predictors`. 
 
-A decision tree is useful here in that it will segregate the students based on all values of the two variables. The variable which creates the best similar sets of students (i.e. sets which are dissimilar to each other). 
-
+A decision tree is useful here in that it will segregate the students based on all values of the two variables. The variable that creates the best similar sets of students (i.e. sets which are dissimilar to each other). 
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/dtree.png)
 
@@ -958,7 +959,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
 The first step in Machine Learning is getting your data. This step involves finding the raw data in whatever format they are. They may be structured, unstructured, semi structured, whether flat files, tables, JSON format or in a database, video, audio, text etc. 
 
-Now let’s see an example using the Wage dataset provided by the `ISLR` package. 
+Let’s see an example using the Wage dataset provided by the `ISLR` package. 
 
 *** =instructions
 - Know more about the Wage dataset. Use str() and dim() on the Wage dataset. Can you interpret the results?
@@ -982,19 +983,19 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 ```{r}
 
 
-# Get your dataset
+# 1. Take a look at the Wage dataset by printing it out.
 
 Wage
 
-# Learn more about the Wage dataset. Type dim(Wage) to see more.
+# 2. Learn more about the Wage dataset. Type dim(Wage) to see more.
 
 
 
-# Reveal first few observations with the head() function. Type head(Wage) below.
+# 3. Examine the first few observations with the head() function. Type head(Wage) below.
 
 
 
-# Get a summary of the dataset by typing summary(Wage)
+# 4. Get a summary of the dataset by typing summary(Wage)
 
 
 
@@ -1003,20 +1004,19 @@ Wage
 *** =solution
 ```{r}
 
-
-# Print your dataset
+# 1. Take a look at the Wage dataset by printing it out.
 
 Wage
 
-#Get to know more about the Wage dataset.
+# 2. Learn more about the Wage dataset. Type dim(Wage) to see more.
 
 dim(Wage)
 
-# Reveal first few observations with the head() function. Type head(Wage)
+# 3. Examine the first few observations with the head() function. Type head(Wage) below.
 
 head(Wage)
 
-# Get a summary of the dataset by typing summary(Wage)
+# 4. Get a summary of the dataset by typing summary(Wage)
 
 summary(Wage)
 
@@ -1049,33 +1049,36 @@ success_msg("Good work!")
 
 ## Data Preprocessing
 
-Data preprocesing involves transforming data into a basic form that makes it easy to work with. One characteristics of a tidy dataset is that: one observation per row and one variable per column. As you can tell from the previous exercise that the Wage dataset is tidy.
-
+Data preprocessing involves transforming data into a basic form that makes it easy to work with. One characteristic of a tidy dataset is a dataset having **one observation per row and one variable per column**. The Wage dataset is an example of a tidy dataset.
 
 Activities done in this step also includes detecting the presence of missing (NA) values, noise and outliers, or duplicate data.
-
-* Check for missing values
+```
+1: Check for missing values
         sum(is.na(Wage))
 
-* Do some exploratory data analysis
+2: Do some exploratory data analysis
    
-        qplot(age, wage, data=Wage, colour = race)
+        qplot(age, wage, data=Wage, color = race)
 
-* We don’t need the variable “logwage” for our analysis, so we remove it.
+3: We do not need the variable “logwage” for our analysis, so we remove it.
     
         Wage<- subset(Wage, select=- c(logwage))
+
+```
 
 As we saw from the example on satisfaction ratings, predicting continuous variables gives results that are not exactly precise. So for this example, we will present our results in terms of categories. 
 
 We will divide the wage column into 12 categories and add another column called wage_range to the Wage dataset. Each observed wage will therefore fall under one of these 12 categories. 
 
-* A good model will predict the right range of wages a person can earn.
+```
+A good model will predict the right range of wages a person can earn.
 
         wage_range <- cut(Wage$wage, b = 12)
         Wage$wage_range <- wage_range
+```
 
 *** =instructions
-- Now plot age against wage but this time make the colour based on education. 
+- Plot age against wage but this time make the color based on education. 
 - Remove other variables not necessary for this analysis such as health, health_ins, region, race, year, sex, and maritl.
 - Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
 
@@ -1093,15 +1096,16 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 ```{r}
 library(ggplot2)
 
-# Check for missing values
+# 1. Check for missing values in the Wage dataset. Use the sum(is.na(()) function.
+sum(is.na(   ))
 
-# Do some exploratory data visualization
+# 2. Do some exploratory data visualization using the qplot function) Set x=age, y=wage, data=Wage, color=race)
 
-qplot(age, wage, data=Wage, color = race)
+qplot(x= , y= , data= , color =  )
 
-# Remove unnecessary variables
+# Remove the logwage variable using the subset() function, since it is unnecessary. Put logwage inside of c( )
 
-Wage <- subset(Wage, select=- c(logwage)
+Wage <- subset(Wage, select=- c(  ))
 
 # Add wage_range to Wage datasets 
   wage_range <- cut(Wage$wage, b = 12)
