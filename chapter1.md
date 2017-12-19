@@ -627,10 +627,12 @@ a <- coef(reg_model)[1]
 b <- coef(reg_model)[2]
 ```
 
-Find coefficients a and b using the example provided above. What are the values of the coefficients?
+
 *** =instructions
+Find coefficients a and b using the example provided above. What are the values of the coefficients?
 
 *** =hint
+Follow the coef(reg_model)[1] syntax in your answers.
 
 *** =pre_exercise_code
 ```{r}
@@ -676,7 +678,13 @@ b
 *** =sct
 ```{r}
 test_object("a")
+
 test_object("b")
+
+test_error()
+
+success_msg("Super!")
+
 ```
 
 
