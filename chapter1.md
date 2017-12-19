@@ -127,7 +127,7 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_bad, msg_success))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:59972d54f4
-## Get to Know Your Data
+## Examining Your Data
 
 In this exercise, you will test whether there is a connection between a person's salary and their happiness level. The first step is to get to know the data we'll be using.
 
@@ -209,7 +209,7 @@ success_msg("Excellent!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4dea87c7f
 
-## Making a prediction
+## Understanding the Model Variables
 
 From the `emp_data` dataset, we will try to predict a new employee's satisfaction rating when he is paid $200, $400, or $1200 per day.
 
