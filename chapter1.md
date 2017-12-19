@@ -464,7 +464,8 @@ success_msg("Good work!")
 
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
+--- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
+
 ## Linear Regression
 
 The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression is a method for modeling the relationship between two variables. The goal is to find an equation that fits the data.
@@ -506,6 +507,9 @@ msg_success <- "Yes!"
 test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
 
 ```
+
+
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
 ## Create Your Linear Model
 
@@ -524,7 +528,7 @@ A regression model is easy to implement but it often produces low performance mo
 - Create a linear model called `reg_model` on the training dataset
 - Plot the `training` set with earnings on the x-axis and s_rating on the y-axis
 - Draw a regression line on the plot above that represents the model reg_model 
-- Print out the coefficients a and b 
+
 
 *** =hint
 - Type `?lm` to learn how to use the lm() function
@@ -560,7 +564,7 @@ par(cex=.8)
 plot(training$earnings, training$s_rating, col = s_rating, main="Regression Modelling")
 
 
-# Draw a regression line that represents the model reg_model. Use the abline() function. Put the name of the model inside the parentheses of abline()
+# Draw a regression line that represents the model reg_model. Use the abline() function. Type abline(reg_model)
 
 
 # Print out coefficient 'a'
@@ -626,7 +630,7 @@ success_msg("Good work!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
-## Coefficients in a linear model
+## Coefficients in a Linear Model
 
 Remember that the equation for a linear model is `y = a + bx + ei`
 
