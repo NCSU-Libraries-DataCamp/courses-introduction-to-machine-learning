@@ -368,9 +368,8 @@ list = FALSE because we do not want the function to return inTrain as a list.
 - Check the dimension of both datasets to know more about the data
 
 *** =hint
-- type ?createDataPartition and hit Enter in the console to know how to use the createDataPartition() function
-- Make p=0.6 and set list=FALSE
-- To print a variable to the console, simply type the name of the variable on a new line.
+
+- Make p=0.7 and set list=FALSE
 - Use the `dim()` function on training and test set for the fourth instruction
 
 *** =pre_exercise_code
@@ -422,7 +421,7 @@ test <- emp_data[ ]
 
 # 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
 
-inTrain <- createDataPartition(y=empdata$s_rating , p=0.6 , list=FALSE)
+inTrain <- createDataPartition(y=emp_data$s_rating , p=0.6 , list=FALSE)
 
 # 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
 
