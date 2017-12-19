@@ -555,7 +555,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 reg_model <- lm(  ~ , data=  )
 
 
-# 2. Examing a summary of your model. Type summary(reg_model)
+# 2. Examine a summary of your model. Type summary(reg_model)
 
 summary(reg_model)
 
@@ -577,7 +577,7 @@ plot(x=training$earnings, y=training$s_rating, col = training$s_rating, main="Re
 
 reg_model <- lm(s_rating ~ earnings, data=training)
 
-# 2. Examing a summary of your model. Type summary(reg_model)
+# 2. Examine a summary of your model. Type summary(reg_model)
 
 summary(reg_model)
 
@@ -681,7 +681,7 @@ test_object("b")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:6ae37a587e
-## Test Model
+## Test Your Happiness Prediction Model
 
 Here, you will create a function called `predict_happiness` to test your model. 
 
@@ -903,11 +903,9 @@ check_accuracy
 ```{r}
 test_object("check_accuracy")
 
-
 test_error()
 
 success_msg("Great! At this point, you can either accept your model or go back and improve it.")
-
 
 ```
 
