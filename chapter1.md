@@ -636,6 +636,7 @@ Follow the coef(reg_model)[1] syntax in your answers.
 
 *** =pre_exercise_code
 ```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml.RData"))
 reg_model <- lm(s_rating ~ earnings, data=training)
 ```
 
