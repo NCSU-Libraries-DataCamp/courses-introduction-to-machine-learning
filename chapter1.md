@@ -783,7 +783,7 @@ success_msg("Perfect!")
 *** =instructions
 Instead of using `predict_happiness` function, you can also use the built-in `predict` function provided by caret package.The predict function takes in the model and the test dataset like this:
 
-`predict(red_model, test)`
+`predict(reg_model, test)`
 
 Put all your predicted values in a variable called `pred_rating` as in `pred_rating <- predicted(reg_model, test)`
 
@@ -804,7 +804,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/dat
 
 # 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set
 
-pred_rating <- predict(reg_model, test)
+pred_rating <- predict(   , test)
 
 # 2. Compare test set s_rating with predicted s_rating for the test set. A data frame has been created for you.
 
@@ -829,7 +829,6 @@ data.frame(pred_rating, test$s_rating)
 # 3. Click run code to see the output
 
 # 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here. 
-
 
 ```
 
