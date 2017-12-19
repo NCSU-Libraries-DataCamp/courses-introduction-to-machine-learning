@@ -369,7 +369,7 @@ list = FALSE because we do not want the function to return inTrain as a list.
 
 *** =hint
 
-- Make p=0.7 and set list=FALSE
+- Make p=0.6 and set list=FALSE
 - Use the `dim()` function on training and test set for the fourth instruction
 
 *** =pre_exercise_code
@@ -397,13 +397,13 @@ emp_data  <- data.frame(earnings, s_rating)
 
 inTrain <- createDataPartition(y= , p=  , list= )
 
-# 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
+# 2. Partition the inTrain dataset into training and test sets. Follow the example in the block on the left side of the page and fill in the brackets with the correct code.
 
 training <- emp_data[ ]
 
 test <- emp_data[ ]
 
-# 3. Type the variable names `training`  and `test` to see the contents of those variables.
+# 3. Type the variable names `training`  and `test` to see the contents of those variables when you run the code.
 
 
 # 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
@@ -423,8 +423,7 @@ test <- emp_data[ ]
 
 inTrain <- createDataPartition(y=emp_data$s_rating , p=0.6 , list=FALSE)
 
-# 2. Partition the inTrain dataset into training and test sets. Follow the example and fill in the brackets with the correct code.
-
+# 2. Partition the inTrain dataset into training and test sets. Follow the example in the block on the left side of the page and fill in the brackets with the correct code.
 training <- emp_data[inTrain, ]
 test <- emp_data[-inTrain, ]
 
@@ -438,7 +437,7 @@ dim(training)
 dim(test)
 # 5. Run the code before you submit your answer! 
 
-# 6. Submit your answer to proceeed
+# 6. Submit your answer to proceeed!
 
 ```
 
@@ -508,7 +507,7 @@ test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
-## Create Model
+## Create Your Linear Model
 
 A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way, for example, so show that an increase in age leads to increase in weight. 
 
