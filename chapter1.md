@@ -264,12 +264,11 @@ plot(x= , y= , col= , main="Regression Modeling")
 ```{r}
 
 #1. In this exercise, you will make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. But first, read about how a plot function is constructed:
-
-    # The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
-    # `x` is your independent variable  
-    # `y` is your dependent variable  
-    # `col=y` means that the color of the plot is set to the y variable.  
-    # `main="Regression Modeling" is the title of the plot.
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
+# `x` is your independent variable  
+# `y` is your dependent variable  
+# `col=y` means that the color of the plot is set to the y variable.  
+# `main="Regression Modeling" is the title of the plot.
 
 #Fill in the blanks:
 
