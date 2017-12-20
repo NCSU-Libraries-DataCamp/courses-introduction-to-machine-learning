@@ -793,7 +793,7 @@ Instead of using `predict_happiness` function, you can also use the built-in `pr
 
 Put all your predicted values in a variable called `pred_rating` as in `pred_rating <- predicted(reg_model, test)`
 
-Compare pred_rating with the s_rating column in the test data. What do you observe? Are the predicted ratings close to the actual?
+Compare `pred_rating` with the `s_rating` column in the test data. What do you observe? Are the predicted ratings close to the actual?
 
 
 *** =hint
