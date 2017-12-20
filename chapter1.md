@@ -271,7 +271,6 @@ plot(x= , y= , col= , main="Regression Modeling")
 # `main="Regression Modeling" is the title of the plot.
 
 #Fill in the blanks:
-
 plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
