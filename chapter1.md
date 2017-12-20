@@ -39,7 +39,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 
---- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:40173c5d8e
+--- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:40173c5d8e
 ## Machine Learning Process
 
 A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. This is possible with machine learning.
