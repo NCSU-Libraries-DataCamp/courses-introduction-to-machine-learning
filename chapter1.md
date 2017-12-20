@@ -700,7 +700,8 @@ predict_happiness <- function(x){
   b <- coef(reg_model)[2]
   Result <- a + (b * x) 
   percent <- "%"
-  cat(sprintf("The employee should be %s%s satisfied", Result, percent))
+  cat(sprintf("The employee should be %s%s 
+        satisfied", Result, percent))
   }
 ```
 
