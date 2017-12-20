@@ -59,9 +59,9 @@ The first two steps are typical for any analysis involving data, but **creating 
 If machines can learn 10,000 voices and humans can only learn between 10 and 100, does that make computers smarter than humans?
 
 *** =instructions
-- Yes
-- No 
-- Don't know
+- Definitely
+- No
+- Maybe
 
 *** =hint
 Trust your instinct on this one!
@@ -74,9 +74,10 @@ Trust your instinct on this one!
 *** =sct
 ```{r}
 
-msg_bad <- "Computers are getting smarter every day. But humans still have certain advantages, like common sense and instinct."
-msg_success <- "Humans are still pretty smart."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
+msg_def <- "Computers are getting smarter every day. But humans still have certain advantages, like common sense and instinct."
+msg_success <- "It's a debatable point, but humans are still pretty smart."
+msg_maybe <- "You have a right to wonder. Some experts say that in the near future, computers will be smarter than humans. We shall see!"
+test_mc(correct = 2, feedback_msgs = c(msg_def, msg_success, msg_maybe))
 
 ```
 
