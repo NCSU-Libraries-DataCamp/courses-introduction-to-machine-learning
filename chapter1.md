@@ -696,18 +696,13 @@ You are to get coefficients `a` and `b` from `reg_model` and predict satisfactio
 
 ```
 predict_happiness <- function(x){
-  
   a <- coef(reg_model)[1]
-  
   b <- coef(reg_model)[2]
-  
   Result <- a + (b * x) 
- 
   percent <- "%"
-  
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
   }
- ```
+```
 
 *** =instructions
 - Complete the predict_happiness function 
