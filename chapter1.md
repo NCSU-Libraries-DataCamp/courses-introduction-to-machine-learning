@@ -787,7 +787,7 @@ success_msg("Perfect!")
 
 
 *** =instructions
-Instead of using `predict_happiness` function, you can also use the built-in `predict` function provided by caret package.The predict function takes in the model and the test dataset like this:
+Instead of using `predict_happiness` function, you can also use the built-in `predict` function provided by caret package. The predict function takes in the model and the test dataset like this:
 
 `predict(reg_model, test)`
 
