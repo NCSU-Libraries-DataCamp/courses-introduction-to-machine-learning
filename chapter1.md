@@ -268,7 +268,7 @@ plot(x= , y= , col= , main="Regression Modeling")
 # `col=y` means that the color of the plot is set to the y variable.  
 # `main="Regression Modeling" is the title of the plot.
 
-# Now Fill in the blanks:
+# Now fill in the blanks:
 plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 #2. Click the Run the Code button to see the plot!
