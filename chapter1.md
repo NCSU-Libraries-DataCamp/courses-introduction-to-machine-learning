@@ -17,7 +17,7 @@ From the above definition, which of the following is not a Machine Learning Task
 - Self driving cars
 - A program that prints the next 20 leap years
 - A program that categorizes emails into spam and non-spam
-- Predicting galaxies
+- Predicting where galaxies might be located
 
 *** =hint
 Take a look at the options. Which task requires explicitly programming the computer?
@@ -32,7 +32,7 @@ Take a look at the options. Which task requires explicitly programming the compu
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-msg_bad <- "That is not correct!"
+msg_bad <- "Oops! Try again."
 msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm only human."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
@@ -747,8 +747,9 @@ predict_happiness <- function(x){
 
 predict_happiness(200)
 
-# 3. Now predict the satisfaction rating when an employee is paid $800/day. Use the predict_happiness() function.
+# 3. Now predict the satisfaction rating when an employee is paid $400/day. Use the predict_happiness() function.
 
+# 4. How about $1200? Will the employee be extremely happy? Use the predict_happiness() function to see a prediction.
 
 ```
 
@@ -771,9 +772,11 @@ predict_happiness <- function(x){
 
 predict_happiness(200)
 
-# 3. Now predict the satisfaction rating when an employee is paid $800/day
-predict_happiness(800)
+# 3. Now predict the satisfaction rating when an employee is paid $400/day
+predict_happiness(400)
 
+# 4. How about $1200? Will the employee be extremely happy? Use the predict_happiness() function to see a prediction.
+predict_happiness(1200)
 ```
 
 *** =sct
@@ -878,7 +881,7 @@ The bar above the squared differences means find the *mean* of the squared diffe
 
 - You can find the rmse of the test dataset by running the code below in the console:
 
-    `sqrt(sum( (pred_rating - test$s_rating)^2 ) / n)`
+    `sqrt(sum((pred_rating - test$s_rating)^2) / n)`
 
 *** =hint
 
