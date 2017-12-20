@@ -17,7 +17,7 @@ From the above definition, which of the following is not a Machine Learning Task
 - Self driving cars
 - A program that prints the next 20 leap years
 - A program that categorizes emails into spam and non-spam
-- Predicting where galaxies might be located
+- A program predicting where galaxies might be located
 
 *** =hint
 Take a look at the options. Which task requires explicitly programming the computer?
@@ -47,10 +47,10 @@ A human can learn the voices of 10 (or perhaps 100) co-workers and be able to id
 The steps involved in Machine Learning include the following:
 
 - Getting data
-- Pre-processing the data (Clean, Prepare, Manipulate Data & Exploratory Data Analysis (may include visualization)
+- Pre-processing the data (Clean, Prepare, Manipulate Data and Exploratory Data Analysis)
 - Training the Model
 - Testing the Model
-- Post-Processing the data (Visualizing, Evaluating, Improving the Model & Presenting)
+- Post-Processing the data (Visualize, Evaluate, Improve the Model & Presentation)
 
 The first two steps are typical for any analysis involving data, but **creating a model is a critical part of machine learning.**
 
@@ -64,7 +64,7 @@ If machines can learn 10,000 voices and humans can only learn between 10 and 100
 - Don't know
 
 *** =hint
-As machines get smarter, this point is debated. Humans still have advantages of common sense, instinct and other abilities that computers don't have...for now!
+Trust your instinct on this one!
 
 *** =pre_exercise_code
 ```{r}
@@ -74,8 +74,8 @@ As machines get smarter, this point is debated. Humans still have advantages of 
 *** =sct
 ```{r}
 
-msg_bad <- "Just because computers can learn faster than humans doesn't make them smarter. We still have some advantages!"
-msg_success <- "We humans are still pretty smart."
+msg_bad <- "Computers are getting smarter every day. But humans still have certain advantages, like common sense and instinct."
+msg_success <- "Humans are still pretty smart."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
 ```
