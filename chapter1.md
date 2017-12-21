@@ -296,7 +296,7 @@ success_msg("Good work!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:a11fe162ef
 ## The Caret Package
 
-R packages can be very useful because they contain functions that aren't including in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
+R packages can be very useful because they contain functions that aren't included in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
 
 It is common practice in machine learning to partition a dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package. 
 
@@ -392,7 +392,7 @@ emp_data  <- data.frame(earnings, s_rating)
 *** =sample_code
 ```{r}
 
-# 1. Create the inTrain dataset. Set y = to empdata$s_rating, p= 0.6, and list=FALSE
+# 1. Create the inTrain dataset. Set y = to emp_data$s_rating, p= 0.6, and list=FALSE
 
 inTrain <- createDataPartition(y= , p=  , list= )
 
