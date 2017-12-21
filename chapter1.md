@@ -527,7 +527,7 @@ A regression model is easy to implement but it often produces low performance mo
 
 *** =instructions
 - Create a linear model called `reg_model` on the training dataset
-- Plot the `training` set with earnings on the x-axis and s_rating on the y-axis
+- Plot the `training` set with earnings as the predictor (x) variable and s_rating as the target (y)
 - Draw a regression line on the plot above that represents the model reg_model using abline()
 
 
@@ -550,7 +550,7 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/dat
 *** =sample_code
 ```{r}
 
-# 1. Create a linear model called reg_model. Use s_rating as your y (or target) variable. Use earnings as your predictor variable. Use training as your data.
+# 1. Create a linear model called reg_model. Use earnings as your predictor variable (x). Use s_rating as your y (or target) variable. Use training as your data.
 
 reg_model <- lm(  ~ , data=  )
 
