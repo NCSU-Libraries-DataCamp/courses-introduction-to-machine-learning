@@ -319,6 +319,8 @@ library(caret)
 
 *** =sample_code
 ```{r}
+# Click the Run Code button to see the documentation open in a new tab. Return to this tab and click Submit Answer when you're ready to proceed! 
+
 ?caret::createDataPartition
 ```
 
