@@ -3,32 +3,33 @@ title       : "Machine Learning: Opening up the Black Box"
 description : This chapter provides an introduction to machine learning and hands-on practice developing two common machine learning models - linear regression and random forests.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+---
 
 
---- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:53d9ea348c
 ## The Buzzword
+```yaml
+type: PureMultipleChoiceExercise
+lang: r
+xp: 50
+skills: 1
+key: 53d9ea348c
+```
 
-According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed. This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.** 
+According to Wikipedia, Arthur Samuel in 1959 defined Machine Learning as the subfield of computer science that gives computers the ability to learn without being explicitly programmed. This means that machines will be given the ability to make inferences and observation by learning from data. In other words, **machine learning is the science of teaching the machine to identify trends and patterns in data that cannot easily be detected by humans.**
 
 ### `CLASS ACTIVITY:`
 From the above definition, which of the following is not a Machine Learning Task?
 
-*** =instructions
+`@possible_answers`
 - Self driving cars
 - A program that prints the next 20 leap years
 - A program that categorizes emails into spam and non-spam
 - A program predicting where galaxies might be located
 
-*** =hint
+`@hint`
 Take a look at the options. Which task requires explicitly programming the computer?
 
-*** =pre_exercise_code
-```{r}
-# None
-
-```
-
-*** =sct
+`@sct`
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
@@ -37,10 +38,17 @@ msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm onl
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
 ```
+---
 
-
---- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:40173c5d8e
 ## Machine Learning Process
+
+```yaml
+type: PureMultipleChoiceExercise
+lang: r
+xp: 25
+skills: 1
+key: 40173c5d8e
+```
 
 A human can learn the voices of 10 (or perhaps 100) co-workers and be able to identify them without looking. A machine, however, can learn the voices of over 10,000 people and be able to predict whose voice it is. This is possible with machine learning.
 
@@ -58,20 +66,15 @@ The first two steps are typical for any analysis involving data, but **creating 
 
 If machines can learn 10,000 voices and humans can only learn between 10 and 100, does that make computers smarter than humans?
 
-*** =instructions
+`@possible_answers`
 - Definitely
 - No
 - Maybe
 
-*** =hint
+`@hint`
 Trust your instinct on this one!
 
-*** =pre_exercise_code
-```{r}
-# None 
-```
-
-*** =sct
+`@sct`
 ```{r}
 
 msg_def <- "Computers are getting smarter every day. But humans still have certain advantages, like common sense and instinct."
@@ -81,44 +84,50 @@ test_mc(correct = 2, feedback_msgs = c(msg_def, msg_success, msg_maybe))
 
 ```
 
-
-
-
---- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:06d44465f4
+---
 
 ## The Model: the Secret Weapon in Machine Learning
 
+```yaml
+type: PureMultipleChoiceExercise
+lang: r
+xp: 100
+skills: 1
+key: 06d44465f4
+```
+
+
 A model is an artifact or a formula created by the process of learning from previous data. When you plug in historical data into a machine learning algorithm, you get a model.
 
-In voice recognition, the machine uses a model that takes in an input (a human voice), does some processing and predicts the name of the person as the output. 
+In voice recognition, the machine uses a model that takes in an input (a human voice), does some processing and predicts the name of the person as the output.
 
 ### `CLASS ACTIVITY:`
 
-A good machine learning model depends on which of the following? 
+A good machine learning model depends on which of the following?
 
-*** =instructions
+`@possible_answers`
 - Type of the data and software or statistical tool used for analysis
 - Type of machine learning algorithm used and software or statistical tool used for analysis
 - The quality of the dataset and type of machine learning algorithm used
 
-*** =hint
+`@hint`
 Clean historical data + good machine learning algorithm = Great Model!
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
@@ -127,9 +136,15 @@ msg_success <- "Exactly!"
 test_mc(correct = 3, feedback_msgs = c(msg_bad, msg_bad, msg_success))
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:59972d54f4
+---
 ## Examining Your Data
-
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 59972d54f4
+```
 In this exercise, you will test whether there is a connection between a person's salary and their happiness level. The first step is to get to know the data we'll be using.
 
 You will work with a small dataset called `emp_data`, which has two columns and 20 observations. The 2 columns are `earnings` (a person's salary per day) and `s_rating` (satisfaction level)
@@ -141,14 +156,14 @@ You will work with a small dataset called `emp_data`, which has two columns and 
 `s_rating` = How satisfied the employee is with his/her wage
 
 
-*** =instructions
+`@possible_answers`
 
 The dataset `emp_data` has already been created for you and loaded into this session. Read the steps in the script.R window and follow the instructions for each step!
 
-*** =hint
+`@hint`
 Read the instructions in the comments in the script.R window!
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(caret)
 
@@ -160,7 +175,7 @@ emp_data  <- data.frame(earnings, s_rating)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Look at the first few rows of `emp_data` dataset. On the next line below this comment, type head(emp_data)
@@ -176,7 +191,7 @@ emp_data  <- data.frame(earnings, s_rating)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Look at the first few rows of `emp_data` dataset. On the next line below this comment, type head(emp_data)
@@ -193,7 +208,7 @@ summary(emp_data)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_function("head",
@@ -207,28 +222,35 @@ test_error()
 success_msg("Excellent!")
 
 ```
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4dea87c7f
 
 ## Understanding the Model Variables
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: c4dea87c7f
+```
 
 From the `emp_data` dataset, we will try to predict a new employee's satisfaction rating when he is paid $200, $400, or $1200 per day.
 
 The `earnings` variable is the **predictor**, which means it's the data that we use to make the prediction.
 
-The `s_rating` variable is the **class** variable, or the thing we're trying to predict. 
+The `s_rating` variable is the **class** variable, or the thing we're trying to predict.
 
 
 Let's plot the data we already have to see if there is a relationship between `earnings` and `s_rating`, or an employee satisfaction.
 
-*** =instructions
+`@possible_answers`
 - Plot `emp_data` with earnings on the x-axis and `s_rating` on the y-axis. Follow the steps in the script.R file.
 
-*** =hint
+`@hint`
 This exercise requires you to fill in the blanks provided in the plot() function. Set x = earnings and y = s_rating for best results!
 
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(caret)
 earnings <- c(120, 100, 700, 200, 60, 20, 200, 130, 150, 160, 170, 180, 190, 210, 220, 400, 550, 670, 695, 300)
@@ -239,11 +261,11 @@ emp_data  <- data.frame(earnings, s_rating)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 #1. Make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. But first, read about how a plot function is constructed:
-# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")`
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
@@ -259,11 +281,11 @@ plot(x= , y= , col= , main="Regression Modeling")
 ```
 
 
-*** =solution
+`@solution`
 ```{r}
 
 #1. In this exercise, you will make a scatterplot of emp_data with earnings on the x-axis and s_rating on the y_axis. But first, read about how a plot function is constructed:
-# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")` 
+# The plot function looks like this: `plot(x=____, y=_____,  col=_____, main="_______")`
 # `x` is your independent variable  
 # `y` is your dependent variable  
 # `col=y` means that the color of the plot is set to the y variable.  
@@ -278,7 +300,7 @@ plot(x=earnings, y=s_rating, col=s_rating, main="Regression Modeling")
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
@@ -293,12 +315,20 @@ success_msg("Good work!")
 ```
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:a11fe162ef
+---
+
 ## The Caret Package
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: a11fe162ef
+```
 
-R packages can be very useful because they contain functions that aren't included in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret". 
+R packages can be very useful because they contain functions that aren't included in the base R code. Importing packages into your R session will allow you to access the functions in those packages. We are going to import a package for machine learning called "caret".
 
-It is common practice in machine learning to partition a dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package. 
+It is common practice in machine learning to partition a dataset for analysis into Training and Test sets in order to test the accuracy of your model before feeding in new data. To do this, we will use a function called `createDataPartition()` from the caret package.
 
 To learn more about this function, type `?caret::createDataPartition` in the console or the script.R window. Since it's already typed in for you, click Run Code to see more information about this function from r-documentation.org
 
@@ -306,38 +336,43 @@ When you are finished reading, click Submit Answer.
 
 
 
-*** =instructions
+`@possible_answers`
 ?caret::createDataPartition is already typed for you in the code. Click Run Code to see the results.
 
-*** =hint
+`@hint`
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(caret)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
-# Click the Run Code button to see the documentation open in a new tab. Return to this tab and click Submit Answer when you're ready to proceed! 
+# Click the Run Code button to see the documentation open in a new tab. Return to this tab and click Submit Answer when you're ready to proceed!
 
 ?caret::createDataPartition
 ```
 
-*** =solution
+`@solution`
 ```{r}
 ?caret::createDataPartition
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 ```
-
---- type:NormalExercise lang:r xp:100 skills:1 key:fccca9bca2
+---
 
 ## Create a Training Set
-
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: fccca9bca2
+```
 Both training and test data sets come from the original data. A training set is usually 60 - 70% of the entire dataset while the test set is about 30 - 40%.
 
 The createDataPartition() function can be used to split the data into training and test sets. This function is used like so:
@@ -361,19 +396,19 @@ p is set to 0.7 because we need 70% of the whole data
 list = FALSE because we do not want the function to return inTrain as a list.
 ```
 
-*** =instructions
+`@possible_answers`
 
 - Use createDataPartition() function in R to partition your dataset. This example may help you: `createDataPartition(y= myData$age_group, p=0.7, list=FALSE)`
 - Your training set should be 60% of the entire dataset (p=0.6)
 - Print out the training and test sets  
 - Check the dimension of both datasets to know more about the data
 
-*** =hint
+`@hint`
 
 - Make p=0.6 and set list=FALSE
 - Use the `dim()` function on training and test set for the fourth instruction
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 
 ```{r}
 
@@ -391,7 +426,7 @@ emp_data  <- data.frame(earnings, s_rating)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Create the inTrain dataset. Set y = to emp_data$s_rating, p= 0.6, and list=FALSE
@@ -410,14 +445,14 @@ test <- emp_data[ ]
 # 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
 
 
-# 5. Run the code before you submit your answer! 
+# 5. Run the code before you submit your answer!
 
 
 # 6. Submit your answer to proceeed
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Create the inTrain dataset. Set y = to emp_data$s_rating, p= 0.6, and list=FALSE
@@ -436,13 +471,13 @@ test
 # 4. Show the dimensions of the `training` and `test` sets using the dim() function. Type dim(training) and dim(test)
 dim(training)
 dim(test)
-# 5. Run the code before you submit your answer! 
+# 5. Run the code before you submit your answer!
 
 # 6. Submit your answer to proceeed!
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
@@ -465,8 +500,13 @@ success_msg("Fantastic!")
 
 
 
---- type:PlainMultipleChoiceExercise lang:r xp:50 skills:1 key:fd5f3c1098
-
+```yaml
+type: PureMultipleChoiceExercise
+lang: r
+xp: 50
+skills: 1
+key: fd5f3c1098
+```
 ## Linear Regression
 
 The `lm()` function in R is an implementation of the Linear Regression algorithm. Linear regression is a method for modeling the relationship between two variables. The goal is to find an equation that fits the data.
@@ -479,7 +519,7 @@ The equation is of the form:
 
 `y` is what we want to predict and `x` includes all the predictors required to form the model above.
 
-`a` and `b` are **coefficients** determined by the `lm()` function. 
+`a` and `b` are **coefficients** determined by the `lm()` function.
 
 `ei` stands for errors as a result of the factors we did not consider.  
 
@@ -487,20 +527,20 @@ The equation is of the form:
 Given the meaning of `ei`, what type of model is best?
 
 
-*** =instructions
+`@possible_answers`
 -  A model that minimizes `ei` the most.
 -  A model that maximizes `ei` the most.
 -  Neither model
 
-*** =hint
+`@hint`
 Remember that `ei` stands for errors. Is it better to maximize or minimize errors?
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 msg_bad <- "Sorry, try again"
@@ -511,12 +551,18 @@ test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:1d4011a3d1
+
 ## Create Your Linear Model
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 1d4011a3d1
+```
+A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way, for example, so show that an increase in age leads to increase in weight.
 
-A regression model is easy to implement but it often produces low performance models. This method is useful when the variable involved can be modeled in a linear way, for example, so show that an increase in age leads to increase in weight. 
-
-`lm()` function is used like this: 
+`lm()` function is used like this:
 
 `reg_model <- lm(target ~ predictor, data=dataset)`
 
@@ -525,29 +571,28 @@ A regression model is easy to implement but it often produces low performance mo
 `dataset` = the name of the dataset you want to use
 
 
-*** =instructions
+`@possible_answers`
 - Create a linear model called `reg_model` on the training dataset
 - Plot the `training` set with earnings as the predictor (x) variable and s_rating as the target (y)
 - Draw a regression line on the plot above that represents the model reg_model using abline()
 
 
-*** =hint
+`@hint`
 - Type `?lm` to learn how to use the lm() function
 - Use `abline()` function to fit a line to the plot. Put the model name inside the parentheses.
 - type ?coef to know how to use the coef() function
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
 
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml.RData"))
 
-
 # Clean up the environment
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Create a linear model called reg_model. Use earnings as your predictor variable (x). Use s_rating as your target variable (y). Use training as your data.
@@ -566,10 +611,8 @@ plot(x=earnings, y=s_rating, col = s_rating, main="Regression Modeling")
 
 # 4. Draw a regression line that represents the model reg_model. Type abline(reg_model) in the line below this one.
 
-
 ```
-
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Create a linear model called reg_model. Use earnings as your predictor variable (x). Use s_rating as your target variable (y). Use training as your data.
@@ -593,7 +636,7 @@ abline(reg_model)
 
 ```
 
-*** =sct
+`@sct`
 
 ```{r}
 
@@ -613,33 +656,39 @@ success_msg("You are doing really well!")
 ```
 
 
-
---- type:NormalExercise lang:r xp:100 skills:1 key:84a2fa109d
 ## Coefficients in a Linear Model
+
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 84a2fa109d
+```
 
 Remember that the equation for a linear model is `y = a + bx + ei`
 
 We can get the coefficients `a` and `b` from `reg_model` using the coef() function:
 
 ```{r}
-a <- coef(reg_model)[1] 
+a <- coef(reg_model)[1]
 b <- coef(reg_model)[2]
 ```
 
 
-*** =instructions
+`@possible_answers`
 Find coefficients a and b using the example provided above. What are the values of the coefficients?
 
-*** =hint
+`@hint`
 Follow the coef(reg_model)[1] syntax in your answers.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4925/datasets/ml.RData"))
 reg_model <- lm(s_rating ~ earnings, data=training)
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # 1. Create a variable 'a' for coefficient 'a'
 
@@ -657,7 +706,7 @@ b
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # 1. Create a variable 'a' for coefficient 'a'
 
@@ -675,7 +724,7 @@ b
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("a")
 
@@ -687,13 +736,16 @@ success_msg("Super!")
 
 ```
 
-
-
-
---- type:NormalExercise lang:r xp:100 skills:1 key:6ae37a587e
 ## Test Your Happiness Prediction Model
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 6ae37a587e
+```
 
-Here, you will create a function called `predict_happiness` to test your model. 
+Here, you will create a function called `predict_happiness` to test your model.
 
 You are to get coefficients `a` and `b` from `reg_model` and predict satisfaction when employee is paid `$200`, `$400`, and `$1200` using `predict_hapiness` function.
 
@@ -701,38 +753,38 @@ You are to get coefficients `a` and `b` from `reg_model` and predict satisfactio
 predict_happiness <- function(x){
   a <- coef(reg_model)[1]
   b <- coef(reg_model)[2]
-  Result <- a + (b * x) 
+  Result <- a + (b * x)
   percent <- "%"
-  cat(sprintf("The employee should be %s%s 
+  cat(sprintf("The employee should be %s%s
         satisfied", Result, percent))
   }
 ```
 
-*** =instructions
-- Complete the predict_happiness function 
+`@possible_answers`
+- Complete the predict_happiness function
 - Follow instructions listed for each step.
 
-*** =hint
+`@hint`
 - Get coefficents `a` and `b` from  `reg_model` using the `coef()` function as in previous exercises.
 - Use the data.frame() function to create a table with two variables pred_rating and test$s_rating.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 # load(url(""))
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
 reg_model <- lm(s_rating ~ earnings, data=training)
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
-# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating. Fill in the brackets to get the correct coefficients a and b from the model. 
+# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating. Fill in the brackets to get the correct coefficients a and b from the model.
 
 predict_happiness <- function(x){
 
   a = coef(reg_model)[ ]
   b = coef(reg_model)[ ]
-  Result <- a + (b * x) 
+  Result <- a + (b * x)
   percent<- "%"
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
@@ -747,17 +799,16 @@ predict_happiness(200)
 
 ```
 
-
-*** =solution
+`@solution`
 ```{r}
 
-# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating. 
+# 1. Create a function called predict_happiness that will take in any daily salary and output a happiness satisfaction rating.
 
 predict_happiness <- function(x){
 
   a = coef(reg_model)[1]
   b = coef(reg_model)[2]
-  Result<- a + (b * x) 
+  Result<- a + (b * x)
   percent<- "%"
   cat(sprintf("The employee should be %s%s satisfied", Result, percent))
 }
@@ -773,7 +824,7 @@ predict_happiness(400)
 predict_happiness(1200)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_object("predict_happiness")
@@ -785,11 +836,15 @@ success_msg("Perfect!")
 ```
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:4f8a44fee2
+
 ## Using the predict() Function as an Alternative Approach
 
+```yaml
+type: NormalExercise
+lang: r xp: 100 skills: 1 key: 4f8a44fee2
+```
 
-*** =instructions
+`@possible_answers`
 Instead of using `predict_happiness` function, you can also use the built-in `predict` function provided by caret package. The predict function takes in the model and the test dataset like this:
 
 `predict(reg_model, test)`
@@ -799,9 +854,9 @@ Put all your predicted values in a variable called `pred_rating` as in `pred_rat
 Compare `pred_rating` with the `s_rating` column in the test data. What do you observe? Are the predicted ratings close to the actual?
 
 
-*** =hint
+`@hint`
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 # load(url(""))
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml1.RData"))
@@ -809,7 +864,7 @@ reg_model <- lm(s_rating ~ earnings, data=training)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set. Put reg_model in parentheses before test.
@@ -822,11 +877,11 @@ data.frame(pred_rating, test$s_rating)
 
 # 3. Click run code to see the output
 
-# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here. 
+# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here.
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # 1. Create a variable called pred_rating, which is the predicted satisfaction ratings for test set. Put reg_model in parentheses before test.
 
@@ -838,11 +893,11 @@ data.frame(pred_rating, test$s_rating)
 
 # 3. Click run code to see the output
 
-# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here. 
+# 4. What do you observe? Are the predicted ratings close to the actual? No need to type anything here.
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("pred_rating")
 
@@ -852,10 +907,10 @@ success_msg("Great job!")
 
 
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:75c935d749
+```yaml type: NormalExercise lang: r xp: 100 skills: 1 key: 75c935d749
 ## Check the Accuracy of Your Model
 
-There a number of ways to evaluate your model. For this exercise, you will use the root-mean-square error (RMSE). 
+There a number of ways to evaluate your model. For this exercise, you will use the root-mean-square error (RMSE).
 RMSE is gotten by calculating mean squared errors. This is simply a measures of deviation of predicted points from the original value.
 
 
@@ -866,38 +921,38 @@ The formula is:
 
 Where:
 
- * f = predicted values 
- * o = true values 
+ * f = predicted values
+ * o = true values
 The bar above the squared differences means find the *mean* of the squared difference.
 
 
-*** =instructions
+`@possible_answers`
 
 - You can find the rmse of the test dataset by running the code below in the console:
 
     `sqrt(sum((pred_rating - test$s_rating)^2) / n)`
 
-*** =hint
+`@hint`
 
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml2.RData"))
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # 1. Check the accuracy of your model by calculating the RMSE for pred_rating and test$s_rating
 
 n = 20 # n is the number of observations predicted
 
-check_accuracy <- sqrt(sum(( - )^2) / n) 
+check_accuracy <- sqrt(sum(( - )^2) / n)
 
 # 2. Print 'check_accuracy' to see your results
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Check the accuracy of your model by calculating the RMSE for pred_rating and test$s_rating
@@ -908,11 +963,11 @@ check_accuracy <- sqrt(sum((pred_rating - test$s_rating)^2)/n)
 
 
 # 2. Print 'check_accuracy' to see your results
-check_accuracy 
+check_accuracy
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 test_object("check_accuracy")
 
@@ -923,18 +978,25 @@ success_msg("Great! At this point, you can either accept your model or go back a
 ```
 
 
---- type:PlainMultipleChoiceExercise lang:r xp:100 skills:1 key:e4a7c1750f
+
 ## Decision Tree Algorithm
+```yaml
+type: PureMultipleChoiceExercise
+lang: r
+xp: 100
+skills: 1
+key: e4a7c1750f
+```
 
 Decision trees are a type of `supervised learning` algorithm and are mostly used in `classification` problems. **The decision tree algorithm involves splitting the population or sample into two or more sub-populations based on the most significant input variables.**
 
-Here is an example: 
+Here is an example:
 
-Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 15 out of these 30 play `Basketball` in their free time. 
+Suppose we have a sample of `30 students` with two input variables `Gender` and `Height` (5 to 6 ft). 15 out of these 30 play `Basketball` in their free time.
 
-We want to create a model to predict who will play basketball during their free time. Basically, we want to separate students who play basketball in their free time based on highly significant input variables among the variables in the dataset. Significant input variables are called `predictors`. 
+We want to create a model to predict who will play basketball during their free time. Basically, we want to separate students who play basketball in their free time based on highly significant input variables among the variables in the dataset. Significant input variables are called `predictors`.
 
-A decision tree is useful here in that it will segregate the students based on all values of the two variables. The variable that creates the best similar sets of students (i.e. sets which are dissimilar to each other). 
+A decision tree is useful here in that it will segregate the students based on all values of the two variables. The variable that creates the best similar sets of students (i.e. sets which are dissimilar to each other).
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/dtree.png)
 
@@ -946,18 +1008,18 @@ The `Random Forest` algorithm is a variant of decision tree algorithm. The algor
 ### `CLASS ACTIVITY:`
 Which of the following types of questions might you try to answer with a Random Forests model?
 
-*** =instructions
+`@possible_answers`
 - If you make more money, will you be happier?
 - What is a new customer to a web store likely to purchase?
 - Is it true that what goes up must come down?
 
-*** =hint
+`@hint`
 - Random forests are useful for finding relationships that can't be predicted linearly.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 ```
-*** =sct
+`@sct`
 ```{r}
 
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
@@ -968,24 +1030,30 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad))
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:47b0bc653f
+
 ## Getting to Know the Wage Dataset
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 47b0bc653f
+```
+The first step in Machine Learning is getting your data. This step involves finding the raw data in whatever format they are. They may be structured, unstructured, semi structured, whether flat files, tables, JSON format or in a database, video, audio, text etc.
 
-The first step in Machine Learning is getting your data. This step involves finding the raw data in whatever format they are. They may be structured, unstructured, semi structured, whether flat files, tables, JSON format or in a database, video, audio, text etc. 
+Let’s see an example using the Wage dataset provided by the `ISLR` package.
 
-Let’s see an example using the Wage dataset provided by the `ISLR` package. 
-
-*** =instructions
+`@possible_answers`
 - Know more about the Wage dataset. Use str() and dim() on the Wage dataset. Can you interpret the results?
 - Call head() and tail() on your dataset to reveal the first and last 6 observations.
 - Finally, call the summary() function to generate a summary of the dataset. What does the printout tell you?
 
-*** =hint
+`@hint`
 - The str() function gives you an overview of the different variables of the data.
 - The dim() function tells you the number of observations and variables respectively.
 - The summary() function returns several measures for each variable. Such as the maximum observed value, the mean and many more!
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
 
@@ -993,7 +1061,7 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # 1. Take a look at the Wage dataset variables using the str() function. Put Wage inside of str().
 
@@ -1010,7 +1078,7 @@ Wage <- read.csv('http://s3.amazonaws.com/assets.datacamp.com/production/course_
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Take a look at the Wage dataset by printing it out.
@@ -1031,7 +1099,7 @@ summary(Wage)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
@@ -1040,10 +1108,10 @@ test_function("str",
 
 test_function("dim",
               not_called_msg = "You didn't call `dim()`")
-              
+
 test_function("head",
               not_called_msg = "You didn't call `head()`")
-             
+
 test_function("summary",
               not_called_msg = "You didn't call `summary()`")
 
@@ -1053,9 +1121,16 @@ success_msg("Good work!")
 ```
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:4b8748fe97
-
+---
 ## Data Preprocessing
+
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 4b8748fe97
+```
 
 Data preprocessing involves transforming data into a basic form that makes it easy to work with. One characteristic of a tidy dataset is a dataset having **one observation per row and one variable per column**. The Wage dataset is an example of a tidy dataset.
 
@@ -1065,41 +1140,41 @@ Activities done in this step also includes detecting the presence of missing (NA
         sum(is.na(Wage))
 
 2: Do some exploratory data analysis
-   
+
         qplot(age, wage, data=Wage, color = race)
 
 3: We do not need the variable “logwage” for our analysis, so we remove it.
-    
+
         Wage<- subset(Wage, select=- c(logwage))
 
 ```
 
-As we saw from the example on satisfaction ratings, predicting continuous variables gives results that are not exactly precise. So for this example, we will present our results in terms of categories. 
+As we saw from the example on satisfaction ratings, predicting continuous variables gives results that are not exactly precise. So for this example, we will present our results in terms of categories.
 
-We will divide the `wage` column into 12 categories and add another column called `wage_range` to the Wage dataset. Each observed wage will therefore fall under one of these 12 categories. 
+We will divide the `wage` column into 12 categories and add another column called `wage_range` to the Wage dataset. Each observed wage will therefore fall under one of these 12 categories.
 
 ```{r}
         wage_range <- cut(Wage$wage, b = 12)
-        
+
         Wage$wage_range <- wage_range
 ```
 
-*** =instructions
-- Plot age against wage but this time make the color based on education. 
+`@possible_answers`
+- Plot age against wage but this time make the color based on education.
 - Remove other variables not necessary for this analysis such as health, health_ins, region, race, year, sex, and maritl.
 - Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
 
 
-*** =hint
+`@hint`
 - Use subset() function to remove these variables as in  `Wage<- subset(Wage, select=- c(logwage, health...`
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml3.RData"))
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 library(ggplot2)
 
@@ -1116,14 +1191,14 @@ Wage <- subset(Wage, select=- c(  ))
 
 # 4. Add wage_range variable to the Wage datasets. Put Wage$wage inside of cut() and b=12.
  wage_range <- cut(  ,  )
- 
+
  Wage$wage_range <- wage_range
 
 #5. Call head() on Wage to check that our new column has been added. Observe that each wage falls within the corresponding wage_range.
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 library(ggplot2)
 
@@ -1147,7 +1222,7 @@ Wage$wage_range <- wage_range
 head(Wage)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_function("qplot",
@@ -1160,35 +1235,42 @@ test_error()
 
 success_msg("You did it!")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:2099ae7c71
-## Forest of Trees
 
+---
+## Forest of Trees
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 2099ae7c71
+```
 In this step, you will:
 
 * Partition the data into `training` and `test` sets.
 * Create a random forest model called `rf_model` to predict `wage` based on three input variables - `age`, `education` and `job class`.The function randomForest() is used to create a random forest model like this:
-    
+
     `rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=500)`
 
 
-*** =instructions
-- Use createDataPartition() function to partition your dataset. Your training set should be 70% of the entire dataset 
+`@possible_answers`
+- Use createDataPartition() function to partition your dataset. Your training set should be 70% of the entire dataset
 - Print out the first few observations of training and test sets and check the dimension of both datasets to know more about the data
 - Now plot the training dataset with age on the x-axis, wage on the y-axis and make the colour based on education. What do you notice?
 - Create you own `rf_model`, but this time grow 800 trees. Print `rf_model` to console.
 
 
 print(rf_model)
-*** =hint
+`@hint`
 - type ?createDataPartition to know how to use the createDataPartition() function
 - Make p=0.7 and set list=FALSE
 - To print a variable to the console, simply type the name of the variable on a new line.
 - Use `qplot()` for the third instruction. Just as you did in the previous exercise.
 - Do you notice that the plot created from the training set is similar to the plot done on the whole Wage dataset? This is because the createDataPartition function splits the data evenly into training and test sets.
 - For the last instruction, set `ntree` to 800. Print rf_model to console.
-- Use head() function for the third instruction. To print a variable to the console, simply type the name of the variable on a new line. 
+- Use head() function for the third instruction. To print a variable to the console, simply type the name of the variable on a new line.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(caret)
 library(randomForest)
@@ -1197,7 +1279,7 @@ wage_range <- Wage$wage_range
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Create a dataset partition called inTrain. Set y = to wage_range, p=0.7 and list=FALSE.
@@ -1218,7 +1300,7 @@ test <- Wage[ ]
 qplot(x= , y= wage, data=training, color=education)
 
 
-# 5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800. 
+# 5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800.
 rf_model <- randomForest(x=    ~ y=   + jobclass + education, data =  , importance = TRUE, ntree=  )
 
 
@@ -1227,7 +1309,7 @@ rf_model
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Create a dataset partition called inTrain. Set y = to wage_range, p=0.7 and list=FALSE.
@@ -1254,7 +1336,7 @@ dim(test)
 # 4. Make a scatter plot of training set variables age and wage, with color = to education.
 qplot(age, wage, data=training, color=education)
 
-#5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800. 
+#5. Now create your randomForest model. Your target variable (y) is wage_range. Your predictor variable (x) is age. Jobclass and education have been added to the model as well. Set data = training and ntree=800.
 
 rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=800)
 
@@ -1263,7 +1345,7 @@ rf_model
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_object("training")
@@ -1277,15 +1359,22 @@ test_function("head", not_called_msg = "You need to call `head()` twice for `tra
 
 test_function("randomForest",
               not_called_msg = "You need to call `randomForest()`")
-              
+
 test_error()
 
 success_msg("Wow! You are amazing!")
 
 ```
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5c7dfd46fe
 ## Check the Accuracy of your Random Forests Model
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 2099ae7c71
+```
 
 Test your `rf_model` by using the predict function like this:
 
@@ -1295,16 +1384,16 @@ To check accuracy of your model, calculate RMSE using postResample() function li
 
 `postResample(actual_wage, pred_wage)`
 
-*** =instructions
+`@possible_answers`
 - Now, test your `rf_model` by using the `predict()` function. Store the predicted wages in a variable called `pred_wage`.
 - Compare predicted wage to original wage of test dataset by creating a table called `compare_result`with data.frame() function having two columns testing$wage and pred_wage
-- Print out the first few observation of `compare_result` 
-   
+- Print out the first few observation of `compare_result`
 
-*** =hint
+
+`@hint`
 - Use head() for the third instruction.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml5.RData"))
 library(randomForest)
@@ -1314,7 +1403,7 @@ library(caret)
 rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=800)
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 
 # 1. Test your `rf_model` by using the predict() function. Ex: predict(model_name, test_data)`
@@ -1324,18 +1413,18 @@ pred_wage_range <-
 # 2. Compare predicted wage to original wage of test dataset. This creates a data set with one column having the actual data, and one column having the predicted data.
 
 compare_result <- data.frame(test$wage_range, pred_wage_range)
-  
+
 # 3. Print out the first few observation of compare_result using the head() function
 
 
-# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function! 
-#Example: postResample(actual_wage, pred_wage_range) 
+# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function!
+#Example: postResample(actual_wage, pred_wage_range)
 
 postResample(test$wage_range, )
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Test your `rf_model` by using the predict() function for rf_model and your test data (test). Ex: predict(model_name, test)`
@@ -1348,26 +1437,26 @@ compare_result <- data.frame(test$wage_range, pred_wage_range)
 
 # 3. Print out the first few observation of compare_result using the head() function
 
-head(compare_result) 
+head(compare_result)
 
-# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function! 
-#Example: postResample(actual_wage, pred_wage_range) 
+# 4. Check the accuracy of your model by calculating the RMSE. Use the postResample() function!
+#Example: postResample(actual_wage, pred_wage_range)
 
 postResample(test$wage_range, pred_wage_range)
 
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
-              
+
 test_function("predict",
               not_called_msg = "You need to call `predict()`")
-              
+
 test_function("data.frame",
               not_called_msg = "You need to call `data.frame()`")
 
-test_function("head", 
+test_function("head",
               not_called_msg = "You need to call the `head() function`")
 
 test_function("postResample",
@@ -1378,9 +1467,16 @@ test_error()
 success_msg("Good work! At this point, you can accept your model and present your work or seek to improve your model.")
 
 ```
+---
 
---- type:NormalExercise lang:r xp:100 skills:1 key:61976945d8
 ## Improving Your Model
+```yaml
+type: NormalExercise
+lang: r
+xp: 100
+skills: 1
+key: 61976945d8
+```
 
 Your model depends on the quality of your dataset and the type of Machine Learning algorithm used. Therefore, to improve the accuracy of your model, you should:
 
@@ -1392,7 +1488,7 @@ Your model depends on the quality of your dataset and the type of Machine Learni
 If any of these reduces the RMSE significantly, you have succeeded in improving your model!
 
 
-*** =instructions
+`@possible_answers`
 - Call importance() function on `rf_model` to check how the attributes used as predictors affect our model
 - Call varImpPlot() function on `rf_model` to visually check variable importance
 - What do you notice?
@@ -1412,53 +1508,51 @@ This brings us to the end of this course. Keep finding ways to create better Mac
 
 ### `Good luck in your future endeavors!`
 
-*** =hint
+`@hint`
 
-- Type importance(rf_model) and varImpPlot(rf_model) 
+- Type importance(rf_model) and varImpPlot(rf_model)
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 library(caret)
 library(randomForest)
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_5412/datasets/ml5.RData"))
 rf_model <- randomForest(wage_range ~ age + jobclass + education, data = training, importance = TRUE, ntree=800)
- 
+
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # 1. Check what attributes affect our model the most. Use the `importance()` function on `rf_model`.
 
-importance( ) 
+importance( )
 
 # 2. Use the `varImpPlot()` function on `rf_model`
 
-varImpPlot( ) 
+varImpPlot( )
 ```
 
-*** =solution
+`@solution`
 ```{r}
 
 # 1. Check what attributes affect our model the most. Use the `importance()` function on `rf_model`.
 
-importance(rf_model) 
+importance(rf_model)
 
 # 2. Use the `varImpPlot()` function on `rf_model`
 
 varImpPlot(rf_model)
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_function("importance",
               not_called_msg = "Try calling `importance()`")
 
-test_function("varImpPlot", 
+test_function("varImpPlot",
               not_called_msg = "Try calling `varImpPlot()`")
-              
-              
-              
+
+
+
 ```
-
-
