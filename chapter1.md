@@ -29,13 +29,13 @@ From the above definition, which of the following is not a Machine Learning Task
 `@hint`
 Take a look at the options. Which task requires explicitly programming the computer?
 
-`@sct`
+`@feedback`
 ```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-msg_bad <- "Oops! Try again."
-msg_success <- "Exactly! Even I can calculate the next 50 leap years and I'm only human."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+- Oops! Try again.
+- Exactly!
+- Try again.
+- Try again.
 
 ```
 ---
@@ -64,23 +64,20 @@ The first two steps are typical for any analysis involving data, but **creating 
 
 ### `CLASS ACTIVITY:`
 
-If machines can learn 10,000 voices and humans can only learn between 10 and 100, does that make computers smarter than humans?
+What is the difference between pre- and post- processing the data?
 
 `@possible_answers`
-- Definitely
-- No
-- Maybe
+- pre-processing involves evaluation whereas post-processing involves visualization
+- pre-processing involves presentation wheras post-processing involves data cleaning
+- pre-processing involves data cleaning and post-processing involves presentation
 
 `@hint`
 Trust your instinct on this one!
 
 `@sct`
 ```{r}
-
-msg_def <- "Computers are getting smarter every day. But humans still have certain advantages, like common sense and instinct."
-msg_success <- "It's a debatable point, but humans are still pretty smart."
-msg_maybe <- "You have a right to wonder. Some experts say that in the near future, computers will be smarter than humans. We shall see!"
-test_mc(correct = 2, feedback_msgs = c(msg_def, msg_success, msg_maybe))
+Ex().has_chosen(3, [
+'Try again', 'Not quite', 'Correct!']
 
 ```
 
